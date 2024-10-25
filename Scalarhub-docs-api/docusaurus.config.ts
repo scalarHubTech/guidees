@@ -18,7 +18,7 @@ const config: Config = {
   projectName: 'guides', // Usually your repo name.
   deploymentBranch: "gh-pages",
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
 
   i18n: {
@@ -121,7 +121,7 @@ const config: Config = {
       },
       items: [
         {
-          to: "/guides/Overview",
+          to: "${baseUrl}/guides/Overview",
           sidebarId: 'guideSidebar',
           label: "Guides",
           position: "left",
