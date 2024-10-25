@@ -16,7 +16,7 @@ const config: Config = {
 
   organizationName: 'scalarHubTech', // Usually your GitHub org/user name.
   projectName: 'guides', // Usually your repo name.
-  deploymentBranch: "gh-pages",
+  // deploymentBranch: "gh-pages",
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
