@@ -9,20 +9,18 @@ const config: Config = {
   title: 'ScalarHub',
   tagline: '',
   favicon: 'img/favicon.ico',
-  url: 'https://scalarhub-api-docs.com',
-  baseUrl: '/',
+  // url: 'https://scalarhub-api-docs.com',
+  url:'https://scalarHubTech.github.io',
+  baseUrl: '/guides/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ScalarHub', // Usually your GitHub org/user name.
-  projectName: 'Scalarhub-api-docs', // Usually your repo name.
+
+  organizationName: 'scalarHubTech', // Usually your GitHub org/user name.
+  projectName: 'guides', // Usually your repo name.
+  deploymentBranch: "gh-pages",
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -35,8 +33,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           routeBasePath: 'reference/',
           docItemComponent: "@theme/ApiItem", 
           editUrl:
@@ -101,11 +97,10 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'guides', // Unique ID for the API reference section
-        path: 'guides', // Folder containing API reference docs
-        routeBasePath: '/guides/', // Base URL for API reference
-        sidebarPath: require.resolve('./sidebarGuides.ts'), // Custom sidebar for API reference
-        // editUrl: 'https://github.com/your-repo/edit/main/apireference/',
+        id: 'guides',
+        path: 'guides',
+        routeBasePath: '/guides/',
+        sidebarPath: require.resolve('./sidebarGuides.ts'), 
       },
     ],
     
@@ -114,7 +109,6 @@ const config: Config = {
 
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
-    // Replace with your project's social card
     navbar: {
       logo: {
         alt: 'ScalarHub Logo',
