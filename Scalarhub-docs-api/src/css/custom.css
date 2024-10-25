@@ -1,0 +1,100 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+/* 
+.docSidebarContainer {
+  width: 900px;  
+}  
+
+.docs-sidebar {
+  width: 100%;  
+}  */
+
+
+.navbar__logo {
+  margin-left: 10px;  /* Adjust the left margin as needed */
+  display: flex;
+  align-items: center;  
+}
+
+.sidebar-item-get::before {
+  content: 'GET';
+  background-color: #0081cc; /* Blue for GET */
+  color: white;
+}
+
+.sidebar-item-put::before {
+  content: 'PUT';
+  background-color:#54c7ec;  /* Blue for GET */
+  color: white;
+}
+
+.sidebar-item-delete::before {
+  content: 'DEL';
+  background-color: #dc3545; /* Red for DELETE */
+  color: white;
+}
+
+.sidebar-item-post::before {
+  content: 'POST';
+  background-color: #28a745; /* Green for POST */
+}
+
+.sidebar-item-post::before ,.sidebar-item-delete::before ,.sidebar-item-put::before, .sidebar-item-get::before{
+  color: white;
+  padding: 0.2em 1em;
+  border-radius: 5px;
+  display: inline;
+  font-size: 12px;
+  font-weight: 600;
+  height: 20px;
+  line-height: 20px;
+  width: 30px;
+  text-align: center;
+} 
+
+.sidebar-item-get .menu__link,.sidebar-item-delete .menu__link,.sidebar-item-post .menu__link,.sidebar-item-put .menu__link{
+  display: inline-flex;
+  margin-left: 3px;
+  word-wrap: break-word;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+/* @media (min-width: 998px) {
+  .menu{
+    
+    width:1024px;
+    line-height: 1.5; 
+  }
+} */
+
+
