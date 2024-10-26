@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscalarhub_docs_api=self.webpackChunkscalarhub_docs_api||[]).push([[4583],{36866:(s,e,u)=>{u.r(e),u.d(e,{default:()=>r});var a=u(96540),c=u(56347);const r=()=>{const s=(0,c.W6)();return(0,a.useEffect)((()=>{s.push("guides/Overview")}),[s]),null}}}]);
