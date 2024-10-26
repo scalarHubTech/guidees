@@ -8,7 +8,7 @@ const config: Config = {
   title: 'ScalarHub',
   tagline: '',
   favicon: 'img/favicon.ico',
-  url: 'https://scalarHubTech.github.io',
+  url: 'https://scalarhubtech.github.io',
   baseUrl: '/guides/',
   organizationName: 'scalarHubTech',
   projectName: 'guides', // Usually your repo name.
