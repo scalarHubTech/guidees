@@ -9,9 +9,9 @@ const config: Config = {
   tagline: '',
   favicon: 'img/favicon.ico',
   url: 'https://scalarhubtech.github.io',
-  baseUrl: '/',
+  baseUrl: '/guides',
   organizationName: 'scalarHubTech',
-  projectName: 'guides', // Usually your repo name.
+  projectName: 'guides', 
   
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
@@ -28,8 +28,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           routeBasePath: 'reference/',
           docItemComponent: "@theme/ApiItem", 
           editUrl:
@@ -45,8 +43,8 @@ const config: Config = {
     [
       "docusaurus-plugin-openapi-docs",
       {
-        id: "openapi", // Keep the ID as it is
-        docsPluginId: "classic", // Reference the classic theme's ID
+        id: "openapi",
+        docsPluginId: "classic", 
         config: {
           account: {
             specPath: 'examples/account.yaml', 
@@ -94,11 +92,10 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'guides', // Unique ID for the API reference section
-        path: 'guides', // Folder containing API reference docs
-        routeBasePath: '/guides/', // Base URL for API reference
-        sidebarPath: require.resolve('./sidebarGuides.ts'), // Custom sidebar for API reference
-        // editUrl: 'https://github.com/your-repo/edit/main/apireference/',
+        id: 'guides',
+        path: 'guides', 
+        routeBasePath: 'guides/guides/', 
+        sidebarPath: require.resolve('./sidebarGuides.ts'), 
       },
     ],
     
@@ -107,7 +104,6 @@ const config: Config = {
 
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
-    // Replace with your project's social card
     navbar: {
       logo: {
         alt: 'ScalarHub Logo',
