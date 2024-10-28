@@ -94,7 +94,7 @@ const config: Config = {
       {
         id: 'guides',
         path: 'guides', 
-        routeBasePath: 'guides/guides/', 
+        routeBasePath: 'guides/', 
         sidebarPath: require.resolve('./sidebarGuides.ts'), 
       },
     ],
@@ -116,11 +116,11 @@ const config: Config = {
       },
       items: [
         {
-          to: "/guides/Overview",
+          to: "/guides/Overview/",
           sidebarId: 'guideSidebar',
           label: "Guides",
           position: "left",
-          activeBasepath: "/guides/",
+          activeBasepath: "/guides",
         },
         {
           to:"/reference",
