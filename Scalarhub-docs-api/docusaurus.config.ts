@@ -116,7 +116,7 @@ const config: Config = {
       },
       items: [
         {
-          to: "guides/guides/Overview/",
+          to: "/guides/Overview/",
           sidebarId: 'guideSidebar',
           label: "Guides",
           position: "left",
