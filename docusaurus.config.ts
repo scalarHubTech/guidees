@@ -10,9 +10,6 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   url: 'https://scalarhubtech.github.io',
   baseUrl: '/',
-  organizationName: 'scalarHubTech',
-  projectName: 'guides', 
-  
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
 
