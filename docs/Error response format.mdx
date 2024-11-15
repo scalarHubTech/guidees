@@ -1,0 +1,139 @@
+---
+sidebar_position: 6
+id: Error response format
+---
+import React, { useState } from 'react';
+
+# Errors
+
+How the Scalarhub.ai API handles error responses
+<hr/>
+
+Our APIs utilize HTTP status codes for error management. In the event of a failed API call, we will return a 4xx or 5xx status code.
+
+## Error codes
+
+These are the status codes returned from all endpoints. Some endpoints may have additional errors which are detailed within the respective endpoint documentation.
+
+| Status | Description |
+|--------|-------------|
+| 401    | **Unauthorized** - Please ensure your authentication token is correct |
+| 403    | **Permissions error** - You do not have the correct permissions to access the resource |
+| 404    | **Not found** - The requested resource could not be found |
+| 409    | **Conflict** - The request conflicts with another request |
+| 429    | **Too many requests** - Too many requests in a given amount of time (rate limiting). |
+| 500    | **Internal server error** - The server has encountered an error. If this persists, please contact support. |
+
+## Error structures
+
+These are the typical error structures you will receive for each error code.
+
+<ToggleErrorTable />
+
+export function ToggleErrorTable() {
+  const [selectedError, setSelectedError] = useState(null);
+
+  const errorDetails = {
+    401: {
+      title: "Unauthorized",
+      status: 401,
+      detail: "Invalid authentication for resource."
+    },
+    403: {
+      type: "about:blank",
+      title: "Forbidden",
+      status: 403,
+      detail: "Missing required permissions",
+      instance: "<attempted_path>",
+      permissions: [
+        {
+          identifier: 13,
+          name: "View customers"
+        }
+      ],
+      identifier: "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
+      timestamp: "2024-01-22T13:23:25.512206Z"
+    },
+    "404 - URL not found": {
+      title: "Not Found",
+      status: 404,
+      detail: "This resource could not be found",
+      instance: "<attempted_path>"
+    },
+    "404- Resource bot found": {
+    "type": "about:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "<formatted SQL detailMessage>",
+    "instance": "<attempted_path>",
+    "properties": {
+        "field_name" : "duplicated"
+    },
+    "identifier": "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
+    "timestamp": "2024-01-22T13:23:25.512206Z"
+    },
+    "409": {
+    "type": "about:blank",
+    "title": "Conflict",
+    "status": 409,
+    "detail": "<formatted SQL detailMessage>",
+    "instance": "<attempted_path>",
+    "properties": {
+        "field_name" : "duplicated"
+    },
+    "identifier": "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
+    "timestamp": "2024-01-22T13:23:25.512206Z"
+    },
+    "429": {
+  "message": "API rate limit exceeded"
+
+    },
+    "500": {
+         "type": "about:blank",
+    "title": "Generic Error",
+    "status": 500,
+    "identifier": "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
+    "timestamp": "2024-01-22T13:23:25.512206Z"
+    }
+  };
+  
+  return (
+    <div>
+      {/* Header with clickable error codes */}
+      <div style={{ display: "flex", gap: "1em", marginBottom: "1em" }}>
+        {Object.keys(errorDetails).map((errorCode) => (
+          <button
+            key={errorCode}
+            onClick={() => setSelectedError(errorCode)}
+            style={{
+              padding: "0.5em 1em",
+              cursor: "pointer",
+              backgroundColor: selectedError === errorCode ? "#ccc" : "#f0f0f0",
+              border: "1px solid #ddd",
+              borderRadius: "4px"
+            }}
+          >
+            {errorCode}
+          </button>
+        ))}
+      </div>
+
+      {/* Display selected error details */}
+      {selectedError && (
+        <div style={{ padding: "1em", backgroundColor: "#f9f9f9", border: "1px solid #ddd" }}>
+           <pre style={{ whiteSpace: "pre-wrap",
+              wordWrap: "break-word",
+              backgroundColor: "#f0f0f0",
+              padding: "1em",
+              borderRadius: "4px",
+              display: "block",
+              fontFamily: "monospace",
+              fontSize: "14px"}}>
+            {JSON.stringify(errorDetails[selectedError], null,2)}
+          </pre>
+        </div>
+      )}
+    </div>
+  );
+}
+  
