@@ -29,9 +29,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: 'reference/',
-          docItemComponent: "@theme/ApiItem", 
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: "@theme/ApiItem"
         },
         theme: {
           customCss: './src/css/custom.css',

@@ -1,0 +1,46 @@
+---
+sidebar_position: 8
+id: Rate limits
+---
+
+The ScalarTax API imposes safeguards to help ensure service availability against bursts of incoming traffic. Rate limits are defined based on different modes and categories of endpoints as shown below:
+
+| **Category**               | **Applicable Endpoints**                      | **Live Mode Limit**     | **Test Mode Limit**     | **Trial Limit**          |
+|----------------------------|-----------------------------------------------|--------------------------|--------------------------|---------------------------|
+| **Customer Management**    | `/customers`, `/customers/{id}`              | 60 requests/minute      | 30 requests/minute       | 20 requests/minute        |
+| **Account Management**     | `/accounts`, `/accounts/{id}`                | 50 requests/minute      | 25 requests/minute       | 15 requests/minute        |
+| **User Management**        | `/users`, `/users/{id}`                      | 40 requests/minute      | 20 requests/minute       | 10 requests/minute        |
+| **Product Management**     | `/products`, `/products/{id}`                | 60 requests/minute      | 30 requests/minute       | 20 requests/minute        |
+| **Transaction Processing** | `/transactions`, `/transactions/{id}`        | 100 requests/minute     | 50 requests/minute       | 30 requests/minute        |
+| **Company Management**     | `/companies`, `/companies/{id}`              | 40 requests/minute      | 20 requests/minute       | 10 requests/minute        |
+| **Nexus Management**       | `/s_l_nexuses`, `/s_l_nexuses/{id}`          | 30 requests/minute      | 15 requests/minute       | 10 requests/minute        |
+| **Location Management**    | `/locations`, `/locations/{id}`              | 30 requests/minute      | 15 requests/minute       | 10 requests/minute        |
+| **Exemption Certificates** | `/exemption_certificates`, `/exemption_certificates/{id}` | 20 requests/minute | 10 requests/minute | 5 requests/minute        |
+
+### Burst and Concurrent Request Limits
+
+- **Burst Limit**: Allows up to **2x the Live Mode rate** within a 10-second window.
+- **Concurrent Requests**:
+   - Live Mode: **5 concurrent requests**
+   - Test Mode: **3 concurrent requests**
+   - Trial Mode: **2 concurrent requests**
+
+#### **Rate Limit Response Headers**
+
+| **Header**             | **Description**                                                         |
+|-------------------------|-------------------------------------------------------------------------|
+| `X-RateLimit-Limit`     | Total number of requests allowed in the current time window.            |
+| `X-RateLimit-Remaining` | Number of requests remaining in the current time window.                |
+| `X-RateLimit-Reset`     | Timestamp when the rate limit window resets.                            |
+
+#### **Rate Limit Errors**
+
+| **Status Code**      | **Description**                                                             |
+|-----------------------|-----------------------------------------------------------------------------|
+| `429 Too Many Requests` | Returned when the rate limit is exceeded.                                |
+| `Retry-After` Header  | Indicates the number of seconds to wait before retrying.                   |
+
+#### **Support**
+
+If rate limits impact your operations, please contact the [ScalarHub Support Center](https://scalarhub.ai/scalarhub-support-center/) for assistance.
+
