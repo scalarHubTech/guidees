@@ -255,6 +255,11 @@ paths:
           description: Internal Server Error
 
 components: 
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schemas:
     S_l_Nexus:
       type: object

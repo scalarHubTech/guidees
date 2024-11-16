@@ -13,6 +13,8 @@ servers:
     description: Production server
   - url: http://{{base_url}}/
     description: Local server
+security:
+  - BearerAuth: []
 paths:
   /scalartax/customers:
     post:
@@ -342,6 +344,11 @@ paths:
         '500':
           description: Internal Server Error
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schema:
     Customer:
       type: object

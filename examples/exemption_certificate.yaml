@@ -13,6 +13,7 @@ servers:
     description: Production server
   - url: http://{{base_url}}/
     description: Local server
+
 paths:
   /scalartax/exemption_certificates:
     post:
@@ -338,6 +339,11 @@ paths:
           description: Internal Server Error
           
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schemas:
     Exemption_Certificate:
       type: object

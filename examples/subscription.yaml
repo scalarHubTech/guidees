@@ -224,6 +224,11 @@ paths:
         '500':
           description: Internal Server Error
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schemas:
     Subscription:
       type: object

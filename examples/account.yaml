@@ -13,6 +13,8 @@ servers:
     description: Production server
   - url: http://{{base_url}}/
     description: Local server
+security:
+  - BearerAuth: []
 paths:
   /scalartax/accounts/:
     post:
@@ -148,6 +150,11 @@ paths:
         '500':
           description: Internal Serval Error.
 components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schemas:
     Account:
       type: object
