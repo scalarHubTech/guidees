@@ -19,7 +19,7 @@ paths:
       tags:
         - Entities
       summary: Create Entity
-      dscription: Create a new entity by providing necessary details such as name, address, phone and tax_id.
+      description: This endpoint creates a new entity along with its associated address.
       requestBody:
         content:
           application/json:
@@ -76,7 +76,7 @@ paths:
       tags:
         - Entities
       summary: List Entities
-      description: Retrieve a list of all entities including their ID,name,tax_id,phone and address.
+      description: This endpoint retrieves a list of all entities from database
       security:
         - bearerAuth: []
       responses:
@@ -110,7 +110,7 @@ paths:
       tags:
         - Entities
       summary: Fetch Entity
-      description: Retrieve details of a specific entity by their unique ID,ncluding their name, phone,tax_id and address.
+      description: This endpoint fetch the details of a specific entity by their unique ID
       security:
         - bearerAuth: []
       parameters:

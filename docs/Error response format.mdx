@@ -6,9 +6,6 @@ import React, { useState } from 'react';
 
 # Errors
 
-How the Scalarhub.ai API handles error responses
-<hr/>
-
 Our APIs utilize HTTP status codes for error management. In the event of a failed API call, we will return a 4xx or 5xx status code.
 
 ## Error codes
@@ -23,6 +20,7 @@ These are the status codes returned from all endpoints. Some endpoints may have 
 | 409    | **Conflict** - The request conflicts with another request |
 | 429    | **Too many requests** - Too many requests in a given amount of time (rate limiting). |
 | 500    | **Internal server error** - The server has encountered an error. If this persists, please contact support. |
+| 503    | **Service Unavailable** - The server is currently unavailable (overloaded or down). |
 
 ## Error structures
 
@@ -54,23 +52,11 @@ export function ToggleErrorTable() {
       identifier: "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
       timestamp: "2024-01-22T13:23:25.512206Z"
     },
-    "404 - URL not found": {
+    "404": {
       title: "Not Found",
       status: 404,
       detail: "This resource could not be found",
       instance: "<attempted_path>"
-    },
-    "404- Resource bot found": {
-    "type": "about:blank",
-    "title": "Conflict",
-    "status": 409,
-    "detail": "<formatted SQL detailMessage>",
-    "instance": "<attempted_path>",
-    "properties": {
-        "field_name" : "duplicated"
-    },
-    "identifier": "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
-    "timestamp": "2024-01-22T13:23:25.512206Z"
     },
     "409": {
     "type": "about:blank",
@@ -94,6 +80,15 @@ export function ToggleErrorTable() {
     "status": 500,
     "identifier": "018d3157-0ec8-73ba-a684-865e5e2ff1ed",
     "timestamp": "2024-01-22T13:23:25.512206Z"
+    },
+    "503": {
+         "type": "about:blank",
+  "title": "Service Unavailable",
+  "status": 503,
+  "detail": "The server is temporarily unable to handle your request due to maintenance or overload. Please try again later.",
+  "instance": "<attempted_path>",
+  "retry_after": "120", // Retry after 120 seconds
+  "timestamp": "2024-01-22T13:23:25.512206Z"
     }
   };
   

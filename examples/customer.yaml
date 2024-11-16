@@ -19,7 +19,7 @@ paths:
       tags:
         - Customers
       summary: Create Customer
-      description: This endpoint allows you to add a new customer to the scalartax.
+      description: This endpoint allows you to create a new customer to the scalartax.
       requestBody:
         content:
           application/json:

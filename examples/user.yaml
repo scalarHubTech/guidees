@@ -38,7 +38,7 @@ paths:
       tags:
         - Users
       summary: List Users
-      description: This endpoint retrieves a list of users associated with the tenants.
+      description: This endpoint retrieves a list of users associated with the scalartax.
       responses:
         '200':
           description: OK
@@ -70,7 +70,7 @@ paths:
       tags:
         - Users
       summary: Fetch User
-      description: This endpoint retrieves information about a specific user within the tenants.
+      description: This endpoint retrieves information about a specific user within the scalartax.
       parameters:
         - name: id
           in: path
