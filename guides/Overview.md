@@ -10,13 +10,14 @@ sidebar_position: 1
 
 ScalarHub is built to handle the intricacies of tax management, offering businesses a reliable way to remain compliant across multiple jurisdictions. With an emphasis on automation, accuracy, and security, ScalarHub helps companies stay ahead of evolving tax regulations while reducing manual processes.
 
+
 With ScalarHub, you can:  
 
-- **Automate Tax Calculations**  Based on product type, location, and customer details, ensuring accurate tax rates for every transaction.
+- **Automate Tax Calculations**  based on product type, location, and customer details, ensuring accurate tax rates for every transaction.
 
-- **Manage Compliance**  By automatically applying jurisdiction-specific tax rules and updates.
+- **Manage Compliance**  by automatically applying jurisdiction-specific tax rules and updates.
 
-- **Monitor transactions in real-time**  To identify compliance risks and address them immediately.
+- **Monitor transactions in real-time**  to identify compliance risks and address them immediately.
 
 The platform’s ongoing monitoring capabilities enable continuous review of transactions and compliance status, while its case management tools prioritize and streamline the resolution of tax compliance alerts.
 
@@ -30,7 +31,7 @@ ScalarHub operates on several core concepts that together deliver a comprehensiv
 
 - **Compliance Scores**  A compliance score is assigned to transactions or customers based on their adherence to tax regulations. This score is calculated through a configurable model that evaluates risk factors and compliance requirements.
 
-- **Cases and Alerts**  When compliance issues are detected, a case with one or more alerts is created. Each alert represents a potential risk or non-compliance issue that requires attention, providing transparency and traceability.
+- **Cases and Alerts**  A case with one or more alerts is created when compliance issues are detected. Each alert represents a potential risk or non-compliance issue that requires attention, providing transparency and traceability.
 
 
 
