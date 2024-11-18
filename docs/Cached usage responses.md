@@ -27,7 +27,7 @@ ScalarHub API uses standard HTTP headers to specify caching behavior, ensuring t
 
 #### Example Request Header
 
-"`http
+```http
 GET /customers/{customer_id}/usage HTTP/1.1
 Cache-Control: max-age=0, private, must-revalidate
 ```
@@ -41,7 +41,7 @@ Cache-Control: max-age=0, private, must-revalidate
 
 #### Example Request with Conditional Caching
 
-"`http
+```http
 GET /subscriptions/{subscription_id}/usage HTTP/1.1
 Cache-Control: max-age=0, private, must-revalidate
 If-Modified-Since: Mon, 18 Nov 2024 10:00:00 GMT
