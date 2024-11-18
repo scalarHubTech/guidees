@@ -5,7 +5,7 @@ id: Request idempotency
 
 # Request Idempotency
 
-ScalarHub's API supports idempotency to allow safe request retries without causing unintended duplication of actions. For example, an `Idempotency-Key` ensures that creating a subscription will not accidentally create duplicate subscriptions if the request is retried.Idempotency is strongly recommended for `POST` and `PATCH` operations.`GET`, `PUT`, and `DELETE` operations are idempotent by nature and do not require an explicit key.
+ScalarHub's API supports idempotency to allow safe request retries without causing unintended duplication of actions. For example, an `Idempotency-Key` ensures that creating a subscription will not accidentally create duplicate subscriptions if the request is retried. Idempotency is strongly recommended for `POST` and `PATCH` operations.`GET`, `PUT`, and `DELETE` operations are idempotent and do not require an explicit key.
 
 Users can safely retry requests containing an `Idempotency-Key` within 48 hours. Once expired, retries with the same key may result in re-execution of side effects.
 
@@ -17,8 +17,8 @@ Idempotency-Key: abc123
 
 ```json
 {
-    "name": "John Doe",
-    "email": "john.doe@example.com"
+    "name": "John Doe",
+    "email": "john.doe@example.com"
 }
 ```
 
@@ -34,16 +34,15 @@ Location: /customers/12345
 
 ```json
 {
-    "id": "12345",
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "created_at": "2024-10-04T13:06:48.000Z",
-    "updated_at": "2024-10-04T13:06:48.000Z",
-    "status": "active"
+    "id": "12345",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "created_at": "2024-10-04T13:06:48.000Z",
+    "updated_at": "2024-10-04T13:06:48.000Z",
+    "status": "active"
 }
 ```
-
-The `Idempotency-Key` header echoes the key sent in the original request. The `Idempotent-Replayed` header is set to `false`, indicating that this is a new response and not a repeated one. This format ensures that the client can confirm the successful creation of the customer, even if the request is repeated with the same idempotency key.
+The `Idempotency-Key` header reflects the key provided in the original request. The `Idempotent-Replayed` header is set to `false`, which indicates that the response is new and not a repeat of a previous one. This format allows the client to verify the successful creation of the customer, even if the original request is sent again with the same idempotency key.
 
 ## Generating Idempotency Keys
 
@@ -55,7 +54,7 @@ The `Idempotency-Key` header echoes the key sent in the original request. The `I
 
 When using idempotency keys, several error scenarios may arise:
 
-- **Missing Idempotency Key** If a request is made without an `Idempotency-Key`, the server will process it normally, but subsequent requests with the same parameters will not be idempotent
+- **Missing Idempotency Key** If a request is made without an `Idempotency-Key`, the server will process it usually, but subsequent requests with the same parameters will not be idempotent
 
 ```http
 400 Bad Request: "Idempotency-Key header is missing."
@@ -63,12 +62,12 @@ When using idempotency keys, several error scenarios may arise:
 
 - **Duplicate Idempotency Key**If the same `Idempotency-Key` is used for different operations, the server will respond based on the first request made with that key.
 ```http
-409 Conflict: "This idempotency key has already been used."
+409 Conflict: "This idempotency key has already been used." 
 ```
 
 - **Expired Idempotency Key**
 
-Depending on server settings, keys may expire after a certain time. If a key is reused after expiration, it will be treated as a new request.
+Server settings may set a specific expiration time for keys. Reusing a key after it has expired will be considered a new request.
 
 <!-- **Response:** -->
 
