@@ -58,7 +58,7 @@ ScalarHub API responses include caching-related headers to indicate the freshnes
 
 #### Example Response Header
 
-"`http
+```http
 HTTP/1.1 200 OK
 Cache-Control: max-age=0, private, must-revalidate
 Cache-Updated-At: 2024-11-18T16:30:00Z
@@ -67,7 +67,7 @@ Content-Type: application/json
 
 #### Example Response for Conditional Request
 
-"`http
+```http
 HTTP/1.1 304 Not Modified
 Cache-Control: max-age=0, private, must-revalidate
 ```
@@ -103,7 +103,7 @@ This header indicates to the ScalarTax API that the request should be simulated 
 
 **Example Request**: Creating a Transaction with Dry Run
 
-"`bash
+```bash
 curl --request POST 'https://api.scalartax.ai/v1/transactions' \
 --header 'Dry-Run: True' \
 --header 'Accept: application/json' \
@@ -120,7 +120,7 @@ curl --request POST 'https://api.scalartax.ai/v1/transactions' \
 
 **Response (Dry Run)**
 
-"`json
+```json
 {
   "transaction_id": "txn_12345",
   "amount": 1500.00,
@@ -155,7 +155,7 @@ Not all endpoints support the dry run feature. When a request is sent to an unsu
 
 **Example of Unsupported Dry Run Request**
 
-"`bash
+```bash
 curl --request PUT 'https://api.scalartax.ai/v1/unsupported-endpoint' \
 --header 'Dry-Run: True' \
 --header 'Authorization: Bearer <your_token>' \
@@ -164,7 +164,7 @@ curl --request PUT 'https://api.scalartax.ai/v1/unsupported-endpoint' \
 
 **Response**:
 
-"`json
+```json
 {
   "error": "Endpoint not supported for dry run requests"
 }
