@@ -23,3 +23,10 @@ import Export from "@theme/ApiExplorer/Export";
 >
 </Heading>
 
+The `SubscriptionAPI` manages the lifecycle of customer subscriptions, providing functionality for creating, viewing, updating, and deleting subscription records. Subscriptions represent a customer’s engagement with a plan and track details such as billing cycles, activation dates, and service periods.
+
+- **Lifecycle Management**: Includes creation, retrieval, modification, and deletion of subscriptions.
+- **Billing and Activation**: Supports billing cycle alignment, contract dates, and activation or termination dates.
+- **Flexible Configuration**: Tracks critical attributes such as status, billing amount, and account association.
+
+This controller ensures robust handling of subscription records through secure parameter handling and integrates business logic via a dedicated `SubscriptionService` class.
