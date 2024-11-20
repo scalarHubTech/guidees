@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-id: Request idempotency
+id: request-idempotency
 ---
 
 # Request Idempotency

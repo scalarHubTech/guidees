@@ -1,9 +1,8 @@
 ---
 sidebar_position: 1
-id: Introduction
+title: Introduction
+id: api-reference
 ---
-
-## API Reference
 
 Welcome to the **ScalarTax API Reference** documentation. The ScalarTax API enables developers to perform comprehensive operations related to tax management, including managing customers, accounts, products, transactions, locations, and more. Built on REST principles, the API ensures predictable URLs and a seamless integration experience.
 
