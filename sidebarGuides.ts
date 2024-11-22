@@ -27,6 +27,27 @@ const sidebarsGuides = {
         items: [
           'Plans and subscriptions/build-your-product-catalog',
           'Plans and subscriptions/creating-subscriptions',
+          'Plans and subscriptions/modifying-subscriptions',
+        ],
+      },
+      {
+        type: 'category',
+        label: 'Invoicing',
+        items:[
+          'Invoicing/introduction',
+          'Invoicing/structure-and-lifecycle',
+          'Invoicing/configure-payments-and-collection',
+          'Invoicing/adjust-draft-invoices',
+          'Invoicing/credit-issued-invoices'
+        ]
+      },
+      {
+        type: 'category',
+        label: 'Revenue reporting',
+        items: [
+          'Revenue reporting/revenue-reporting-methodology',
+          'Revenue reporting/revenue-recognition',
+          'Revenue reporting/revenue-pivots'
         ],
       },
     ],

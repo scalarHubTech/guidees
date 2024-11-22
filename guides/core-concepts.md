@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ### Accounts
 
-Accounts are ScalarHub's backbone and are responsible for managing businesses or organizations registered on the platform. It is the starting point for configuring tax and compliance settings, centralizing organization-wide configurations, and managing metadata. Linking essential resources like customers and transactions ensures accurate and consolidated workflows, supports creating, updating, and retrieving account data, and provides a central hub for operational clarity and compliance management.
+Accounts are ScalarHub's backbone and manage businesses or  organizations registered on the platform. It is the starting point for configuring tax and compliance settings, centralizing organization-wide configurations, and managing metadata. Linking essential resources like customers and transactions ensures accurate and consolidated workflows, supports creating, updating, and retrieving account data, and provides a central hub for operational clarity and compliance management.
 
 | **Resource** | **Description** |
 |--------------|---------------------------------------------------------------------------------------------------|
@@ -35,8 +35,7 @@ This controller processes, retrieves, and updates transaction logs, ensuring det
 
 
 ### S_l_Nexus
-
-The S_l_Nexus Controller assists businesses in mapping their operations to jurisdictions with tax obligations, ensuring local compliance. It is critical to define relationships between accounts and tax jurisdictions and facilitate compliance management. The controller tracks, retrieves, and updates tax nexuses, automating compliance workflows and reducing manual efforts. By enabling accurate tax calculations and aligning operations with legal requirements, the S_l_Nexus Controller helps organizations adhere to regional regulations seamlessly. This functionality is essential for maintaining precise reporting and avoiding compliance issues.
+The S_l_Nexus Controller assists businesses in mapping their operations to jurisdictions with tax obligations, ensuring local compliance. Defining relationships between accounts and tax jurisdictions and facilitating compliance management is critical. The controller tracks, retrieves, and updates tax nexuses, automating compliance workflows and reducing manual efforts. By enabling accurate tax calculations and aligning operations with legal requirements, the S_l_Nexus Controller helps organizations adhere to regional regulations seamlessly. This functionality is essential for maintaining precise reporting and avoiding compliance issues.
 
 | **Resource** | **Description** |
 |--------------|---------------------------------------------------------------------------------------------------|
