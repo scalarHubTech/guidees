@@ -106,6 +106,7 @@ const config: Config = {
       logo: {
         alt: 'ScalarHub Logo',
         src: 'img/scalarhub_logo.png',
+        srcDark: 'img/dark_scalarhub_logo.jpg',
         href: '/',
         style: {
           width: '100px',
