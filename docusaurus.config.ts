@@ -7,7 +7,7 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 const config: Config = {
   title: 'ScalarHub',
   tagline: '',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon1.png',
   url: 'https://docs.scalarhub.ai',
   baseUrl: '/',
   organizationName: 'scalarHubTech',
@@ -102,14 +102,19 @@ const config: Config = {
 
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
+    algolia:{
+      apiKey:'1c1f12169dfb92cb4d81982a57638b97',
+      indexName:'prod_scalarhub.ai',
+      appId:'WYFUNULVHN',
+    },
     navbar: {
       logo: {
         alt: 'ScalarHub Logo',
-        src: 'img/scalarhub_logo.png',
-        srcDark: 'img/dark_scalarhub_logo.jpg',
+        src: 'img/dark_scalarhub_logo.png',
+        srcDark: 'img/light_scalarhub_logo.png',
         href: '/',
         style: {
-          width: '100px',
+          width: '200px',
           height: 'auto',  
         },
       },
