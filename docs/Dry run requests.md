@@ -1,9 +1,8 @@
 ---
 sidebar_position: 5
-id: dry-run-requests
+id: dry run requests
+title: Dry Run Requests 
 ---
-
-# Dry Run Requests
 
 The ScalarTax API provides a **dry run** feature that allows you to test API requests without making any changes to the system. This feature is handy for validating the structure and correctness of a request before executing it in a production environment. It simulates the processing of a request and returns the expected response while ensuring no modifications are made to the system's data.
 

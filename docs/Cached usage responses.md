@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-id: cached-usage-responses
+id: cached usage responses
 ---
 
 # Cached Usage Responses
