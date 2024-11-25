@@ -116,6 +116,7 @@ const config: Config = {
         style: {
           width: '200px',
           height: 'auto',  
+          padding:'10px'
         },
       },
       items: [
