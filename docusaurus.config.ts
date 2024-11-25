@@ -136,7 +136,7 @@ const config: Config = {
         },
        
         {
-          href: "https://github.com/scalarHubTech",
+          href: "https://scalarhub.ai/scalarhub-support-center/",
           label: 'Support',
           position: 'right',
         },
