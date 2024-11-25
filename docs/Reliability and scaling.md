@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-id: Reliability and scaling
+id: reliability and scaling
 ---
 
 # Reliability and Scaling

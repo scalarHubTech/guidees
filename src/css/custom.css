@@ -19,7 +19,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #FA4616;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -38,10 +38,19 @@
 }  */
 
 
-.navbar__logo {
-  margin-left: 10px;  /* Adjust the left margin as needed */
+.navbar__logo{
+  margin-right:-80px;
+  margin-left:-60px;
   display: flex;
   align-items: center;  
+  justify-content: center;
+}
+
+.navbar__brand img[src*="light_scalarhub_logo.png"]{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;  
+  /* justify-content: center; */
 }
 
 .sidebar-item-get::before {
@@ -88,13 +97,5 @@
   justify-content: center;
   /* flex-wrap: wrap; */
 }
-
-/* @media (min-width: 998px) {
-  .menu{
-    
-    width:1024px;
-    line-height: 1.5; 
-  }
-} */
 
 
