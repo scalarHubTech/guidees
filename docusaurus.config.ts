@@ -103,8 +103,8 @@ const config: Config = {
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
     algolia:{
-      apiKey:'1c1f12169dfb92cb4d81982a57638b97',
-      indexName:'prod_scalarhub.ai',
+      apiKey:'96280c372191c326291b1af64b0472b3',
+      indexName:'docs-scalarhub',
       appId:'WYFUNULVHN',
     },
     navbar: {

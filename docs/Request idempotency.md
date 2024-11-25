@@ -1,9 +1,8 @@
 ---
 sidebar_position: 2
+title: Request Idempotency
 id: request-idempotency
 ---
-
-# Request Idempotency
 
 ScalarHub's API supports idempotency to allow safe request retries without causing unintended duplication of actions. For example, an `Idempotency-Key` ensures that creating a subscription will not accidentally create duplicate subscriptions if the request is retried. Idempotency is strongly recommended for `POST` and `PATCH` operations.`GET`, `PUT`, and `DELETE` operations are idempotent and do not require an explicit key.
 
@@ -69,7 +68,6 @@ When using idempotency keys, several error scenarios may arise:
 
 Server settings may set a specific expiration time for keys. Reusing a key after it has expired will be considered a new request.
 
-<!-- **Response:** -->
 
 ```http
 410 Gone: "The provided idempotency key has expired."
