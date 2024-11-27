@@ -4,7 +4,7 @@
   <ShortName>ScalarHub</ShortName>
   <Description>Search ScalarHub</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://docs.scalarhub.ai/img/favicon1.png</Image>
+  <Image width="16" height="16" type="image/x-icon">https://docs.scalarhub.ai/img/favicon.ico</Image>
   <Url type="text/html" method="get" template="https://docs.scalarhub.ai/search?q={searchTerms}"/>
   <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.scalarhub.ai/opensearch.xml" />
   <moz:SearchForm>https://docs.scalarhub.ai/</moz:SearchForm>
