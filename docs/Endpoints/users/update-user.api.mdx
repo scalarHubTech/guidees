@@ -5,24 +5,19 @@ description: "This endpoint allows the client to update the details of a specifi
 sidebar_label: "Update User"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVMlu2zAQ/RVizqyV5aZT0+VQoECD2j4ZRjCmxhEdimQ4pJcK/vdiJLexmyKnXqqLpfHj47w3Sw8ZHxnqBcyZEsNSQ0Nsko3ZBg81zFrLinwTg/VZoXNhxyq3pIyz5LPKQZXYYKYh2FBG61iFtULFkYxdW6MKU5qAhkTPhTh/CM0B6h5M8Jl8lleM0VmDcme1Ybm4BzYtdShv+RAJagirDZkMGmiPXXQkf61t4vzgsRPAmEijRIq6vrkdHsF3aB3UkIlz4c2mfaL0/kQyMaEDDQ5faJpAoMGELqI/QA13Hf4IXmLYNImYoQaDzq5D8hbVjliSQmNC8fnBNlDD7QvBGLgW+cHR+AVHecQQjsEzsUi5ubqSn0v7p8UYYl4Xp36BB+q3nBu5O8ptkMtikfQi5hZqqNigw5RxX0lVuOptcwQNTGkr9a8XPZQkZrU5R66rCqOdnHlVbUXKZZL3KTTFyIcaeeCoz2nqqur7FTI9lOSOx+oVwddg0P0+u9QgSr6/dMvn/7/gGqxfh6GbbRYpMB0qMcP9KzuGUVR391/Up2BKRz4P9QUNUqMRcz25mlydWgHN0AonNXJuWmIMSbK8qMJ5HXmE5DO7TqELp44aMqWOv62nlLbW0N/ZBkwl6Bg4d+jPEpqP+0FU/Sn1bAn8001z2hiZ9rmKDq2XzAYr+tMkLOD3JIhLw/LTUNtGVmAbOAtk7Nq5NK2EnwulA9SLpYYtJosrqeNiedTQEjaUhul5Immhj6OsdzNJROCuSEKvplUGZTxxZwzF/CZ2eTbV9/MZaFidVmkXGjmScCdthztpOQ1hcHlYLkOsB4f+seCjYEdKeX4C7RAQgA==
+api: eJzVVE1v2zAM/SsCz1qctjef1n0cBgxYsSSnICgYmamVypIqyk0yw/99oO2uaTv0tMt0sU0/UuR7JDvIeMdQrmHFlBg2Gipik2zMNngoYVlbVuSrGKzPCp0LB1a5JmWcJZ9VDqqNFWYajBVltI5V2ClUHMnYnTWqZUoz0JDooSXOn0J1grIDE3wmn+UVY3TWoNxZ7Fku7oBNTQ3KWz5FghLCdk8mgwY6YhMdya+dTZxvPTYCGBOplJSiLi6vhiP4Bq2DEjJxbnm/r+8pfZyCzExoQIPD5zBVINBgQhPRn6CE6wZ/BS82rKpEzFCCQWd3IXmL6kAsSaExofX51lZQwtVzgNFwIeUHR+MX9HKEEI7BM7GUcjmfy+Ml/YvWGGLetU49gYfQ7zE3xm4o10Eui62kFzHXUELBBh2mjMdCVOGis1UPGpjSo+hfrjtok5BV5xzLonDBoKsD5/JqPr+Y3Ot2awO8bpXvAlVjJOg3GiSfn8+af/3/ZdNg/S4MPWmzlAKLgZAlHt/QMQyUur75pr4E0zbk86ASaBCmR8zFbD6bT4KiGQSdqhG/RRtjSJLlC0nOKCh4hOQzuibTC6Z6DZlSwz92C0qP1tDfow2YQtAxcG7QnyW0Gqdcqnpd6tko/9N9Mc19pmMuokPrJbOBim7q5zX86WdhaVhhGkpbySKTrhVI122RaZVc34v5oaV0gnK90fCIyeJWdFxveg01YUVpmIF7khb6PJb1YSmJCNy1ktCbmev1k8e1MRTzu9jN2WzerJagYTstxCZU4pLwIG2HB2k5DWFgeVgRg60Dh/6uxTvBjiHl/AYfCft9
 sidebar_class_name: "put api-method"
 info_path: reference//Endpoints/Users/scalartax
 custom_edit_url: null
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Heading from "@theme/Heading";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
 
 <Heading
   as={"h1"}
@@ -51,109 +46,26 @@ This endpoint allows the client to update the details of a specific user.
 >
 </Heading>
 
-<MimeTabs
-  className={"openapi-tabs__mime"}
+<ParamsDetails
+  parameters={undefined}
 >
-  <TabItem
-    label={"application/json"}
-    value={"application/json-schema"}
-  >
-    <details
-      style={{}}
-      className={"openapi-markdown__details mime"}
-      data-collapsed={false}
-      open={true}
-    >
-      <summary
-        style={{}}
-        className={"openapi-markdown__details-summary-mime"}
-      >
-        <h3
-          className={"openapi-markdown__details-summary-header-body"}
-        >
-          Body
-        </h3>
-      </summary><div
-        style={{"textAlign":"left","marginLeft":"1rem"}}
-      >
-        
-      </div><ul
-        style={{"marginLeft":"1rem"}}
-      >
-        <div
-          style={{"marginTop":".5rem","marginBottom":".5rem"}}
-        >
-          
-          
-          object
-          
-          
-        </div>
-      </ul>
-    </details>
-  </TabItem>
-</MimeTabs><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          Successful response
-          
-          
-        </div><div>
-          <MimeTabs
-            className={"openapi-tabs__mime"}
-            schemaType={"response"}
-          >
-            <TabItem
-              label={"application/json"}
-              value={"application/json"}
-            >
-              <SchemaTabs
-                className={"openapi-tabs__schema"}
-              >
-                <TabItem
-                  label={"Schema"}
-                  value={"Schema"}
-                >
-                  <details
-                    style={{}}
-                    className={"openapi-markdown__details response"}
-                    data-collapsed={false}
-                    open={true}
-                  >
-                    <summary
-                      style={{}}
-                      className={"openapi-markdown__details-summary-response"}
-                    >
-                      <strong>
-                        Schema
-                      </strong>
-                    </summary><div
-                      style={{"textAlign":"left","marginLeft":"1rem"}}
-                    >
-                      
-                    </div><ul
-                      style={{"marginLeft":"1rem"}}
-                    >
-                      any
-                    </ul>
-                  </details>
-                </TabItem>
-              </SchemaTabs>
-            </TabItem>
-          </MimeTabs>
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
-</div>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"first_name":"updated User 12333333","email":"testusjjhker@example.com","last_name":"doe","company":"Amazone","address":"california west","account_id":"3","company_id":"1","role_id":""}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+>
+  
+</StatusCodes>
+
+
       
