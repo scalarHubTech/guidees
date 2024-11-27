@@ -9,9 +9,7 @@ info:
     email: support@example.com
   termsOfService: http://example.com/terms/
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
-  - url: http://{{base_url}}/
+  - url: http://localhost:3001/scalarhubio
     description: Local server
 security:
   - BearerAuth: []
@@ -29,8 +27,6 @@ paths:
               $ref: "#/components/schemas/Entity"
         description: Entity object
         required: true
-      security:
-        - bearerAuth: []
       responses:
         '201':
           description: Entity Created Successfully
@@ -79,8 +75,6 @@ paths:
         - Entities
       summary: List Entities
       description: This endpoint retrieves a list of all entities from database
-      security:
-        - bearerAuth: []
       responses:
         '200':
           description: OK
@@ -164,8 +158,6 @@ paths:
             schema:
               $ref: "#/components/schemas/Entity"
         required: true      
-      security:
-        - bearerAuth: []
       parameters:
         - name: id
           in: path
@@ -219,8 +211,12 @@ paths:
         - Entities
       summary: Delete entity
       description: Delete a entity from the system using their unique ID.
-      security:
-        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '202':
           description: No Content. Entity Deleted Successfully

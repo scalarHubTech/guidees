@@ -9,9 +9,7 @@ info:
     email: support@example.com
   termsOfService: http://example.com/terms/
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
-  - url: http://{{base_url}}/
+  - url: http://localhost:3001/scalarhubio
     description: Local server
 paths:
   /scalartax/subscriptions:
@@ -99,7 +97,7 @@ paths:
       tags:
         - Subscriptions
       summary: Fetch Subscription
-      description: This API provides access to subscription information.
+      description:  This API endpoint is used to access the details of a specific Transaction.
       parameters:
         - name: id
           in: path
@@ -144,18 +142,18 @@ paths:
         - Subscriptions
       summary: Update Subscription
       description: This API endpoint is used to update the details of a specific Transaction.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Subscription"
-        required: true
       parameters:
         - name: id
           in: path
           schema:
             type: string
           required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Subscription"
+        required: true
       responses:
         '200':
           description: OK. Subscription Updated Successfully.

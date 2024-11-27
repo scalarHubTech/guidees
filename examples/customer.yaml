@@ -9,9 +9,7 @@ info:
     email: support@example.com
   termsOfService: http://example.com/terms/
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
-  - url: http://{{base_url}}/
+  - url: http://localhost:3001/scalarhubio
     description: Local server
 security:
   - BearerAuth: []
@@ -234,18 +232,18 @@ paths:
         - Customers
       summary: Update Customer
       description: This endpoint allows you to update the details of a specific customer.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schema/Customer"
-        required: true
       parameters:
         - name: id
           in: path
           schema:
             type: string
           required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schema/Customer"
+        required: true
       responses:
         '200':
           description: OK. Customer Updated Successfully.

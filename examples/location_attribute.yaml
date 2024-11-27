@@ -9,9 +9,7 @@ info:
     email: support@example.com
   termsOfService: http://example.com/terms/
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
-  - url: http://{{base_url}}/
+  - url: http://localhost:3001/scalarhubio
     description: Local server
 paths:
   /scalartax/location_attributes:
@@ -50,6 +48,7 @@ paths:
       tags:
         - Location Attributes
       summary: List Location Attributes
+      parameters:
       responses:
         '200':
           description: OK
@@ -113,17 +112,17 @@ paths:
       tags:
         - Location Attributes
       summary: Update Location Attribute
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       parameters:
         - name: id
           in: path
           schema:
             type: string
           required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
       responses:
         '200':
           description: OK. Location Attribute Updates Successfully.

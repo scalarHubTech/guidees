@@ -5,24 +5,19 @@ description: "This endpoint is used to delete a specific product belonging to a 
 sidebar_label: "Delete Product"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVMFu2zAM/RWBpw0w4nToLj6tQ1KgQ7EWS4YdimBgZCZWK0uqRHcNDP/7QNtN06bdab5Ylh6fSL5ntsC4TVDcwHX0ZaM5wSqDkpKOJrDxDgpYViYpcmXwxrEySTWJSsVelWSJSaFKgbTZGK3CQKLWZL3bGrcVGComh44nkEHAiDUxRbmzBYc1QQGmhAyM3BWQK8gg6YpqhKIF3gVBJI7GbaHLINJ9YyKVUHBsqFvJTgreJUqC/zSdyutlBVd3EzXWp2Z90qVKjdaU0qaxdie8p9PT48DvntW5b1z5HP/HcKW4IrV4KvpiptweBxlo75gcCxuGYI1GYctvk1C2x7X59S1phgzoEetgSY4oRh+hgHM09kWz5eYxFejkyeDzWyVfOKbo0KoFxQeKat4TCrwmrnwJBQyMvShcQQF50mgxMj7mo44pb03ZiR49yaBZEy0UUDGHVOQ5BjMZ855oX+cPJ/DaP2O6xjs18ECXHdIUed62a0z0u4m26/Ijgkuv0e5jV5KObqLh3UJaOej+lTBSPGukkn1nhf3JTfK97kGQjYtzH2tkKODbr2XfGuM2vg83LDLAom/IEh/fqymps+sLNfO6qclxrzNkIK0aYCeT6WQ6WgJ1b4nR8hK3aELwUZR/0YzDdqYB0rujRiOocevLAUz8yxTrdLURuY2mt9l6TC7o4BPX6A4SGv6LvbdeFdw+u/q/zoNRKKZHzoNF4yS5vhvtaMsb2NtSrPo0pTIoTCmzqvKJBTVY6Kc4SLbvG4o7KG5WGTxgNLgWQW9aKE2SdQnFBm2if5T54cc4aT6q9xIdN9HtRHW0jXxBBne0G6Zat+oyqAhLiv3tw8GZ1hT4IORoTIjJ9//pbH45X86h6/4CwKTztA==
+api: eJytVMtu2zAQ/BViTy0gWE6bXnRqCjtAiqAJahc9GD6sqbXFhCIZctXaEPTvxUqK83DaU3WRSM3OPmbIFhh3CYoV3EZfNpoTrDMoKeloAhvvoIBlZZIiVwZvHCuTVJOoVOxVSZaYFKoUSJut0SoMJGpD1rudcTuBoWJy6HgCGQSMWBNTlJwtOKwJCjAlZGAkV0CuIIOkK6oRihb4EASROBq3gy6DSA+NiVRCwbGhbi07KXiXKAn+w3Qqr5cd3NxP1NifmvVFlyo1WlNK28bag/CeT89PA795Vpe+ceVT/G/DleKK1OKx6auZckccZKC9Y3IsbBiCNRqFLb9LQtme9uY3d6QZMqA91sGS/KIYfYQCLtHYF8OWzGMp0MmTwae3Wr5yTNGhVQuKvyiqeU8o8Jq48iUUMDD2onAFBeRJo8XIuM9HHVPemrITPXqSQbMmWiigYg5Fnluv0VY+cfFxOj0bGapmYzy8ttG1QNXABKJbIt1Ew4eFDGRQ7wthpHjRSD3H+UiqR0/IetODIBs/Ln2skaGArz+XfYPGbX0fbliGCYu+qCXuT0p69Ly6uL1SM6+bmhz3akEG0vAAO5tMJ9NRWNS9sKNxJW7RhOCj6PdiMqOYE+3rPA2QXuMajaDGrc/PYOJCplinm62IZjS9zdZjckEHn7hG96ygwd1Hh7xquH3y5n891aNQTHvOg0XjpLh+Gu1orhUczSWGe7xrMihMKTeOWEhQbbvBRD+i7TrZfmgoHqBYrTP4hdHgRgRdtVCaJN8lFFu0if7R5rvv433xXv2t0HET3UFUR9vICjK4p8NwN3XrLoOKsKTYZx9+XGhNgZ+FnBx2MfnxtM3m1/PlHLruDzJW3sA=
 sidebar_class_name: "delete api-method"
 info_path: reference//Endpoints/Products/scalartax
 custom_edit_url: null
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Heading from "@theme/Heading";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
 
 <Heading
   as={"h1"}
@@ -51,136 +46,26 @@ This endpoint is used to delete a specific product belonging to a tenant.
 >
 </Heading>
 
-<details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
 >
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Path Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"id","in":"path","schema":{"type":"string"},"required":true,"enumDescriptions":[]}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          Ok. Product Deleted successfully
-          
-          
-        </div><div>
-          
-        </div>
-      </TabItem><TabItem
-        label={"404"}
-        value={"404"}
-      >
-        <div>
-          
-          
-          Not Found. Product with the Specific ID not Found.
-          
-          
-        </div><div>
-          <MimeTabs
-            className={"openapi-tabs__mime"}
-            schemaType={"response"}
-          >
-            <TabItem
-              label={"application/json"}
-              value={"application/json"}
-            >
-              <SchemaTabs
-                className={"openapi-tabs__schema"}
-              >
-                <TabItem
-                  label={"Schema"}
-                  value={"Schema"}
-                >
-                  <details
-                    style={{}}
-                    className={"openapi-markdown__details response"}
-                    data-collapsed={false}
-                    open={true}
-                  >
-                    <summary
-                      style={{}}
-                      className={"openapi-markdown__details-summary-response"}
-                    >
-                      <strong>
-                        Schema
-                      </strong>
-                    </summary><div
-                      style={{"textAlign":"left","marginLeft":"1rem"}}
-                    >
-                      
-                    </div><ul
-                      style={{"marginLeft":"1rem"}}
-                    >
-                      <div
-                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
-                      >
-                        
-                        
-                        object
-                        
-                        
-                      </div>
-                    </ul>
-                  </details>
-                </TabItem><TabItem
-                  label={"Example (from schema)"}
-                  value={"Example (from schema)"}
-                >
-                  <ResponseSamples
-                    responseExample={"{\n  \"error\": \"Failed to delete the Product\"\n}"}
-                    language={"json"}
-                  >
-                    
-                  </ResponseSamples>
-                </TabItem>
-              </SchemaTabs>
-            </TabItem>
-          </MimeTabs>
-        </div>
-      </TabItem><TabItem
-        label={"500"}
-        value={"500"}
-      >
-        <div>
-          
-          
-          Internal Server Error
-          
-          
-        </div><div>
-          
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
-</div>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok. Product Deleted successfully"},"404":{"description":"Not Found. Product with the Specific ID not Found.","content":{"application/json":{"schema":{"type":"object","example":{"error":"Failed to delete the Product"}}}}},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
       
