@@ -1,13 +1,13 @@
-import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+import type * as openApiTheme from "docusaurus-theme-openapi-docs";
 
 const config: Config = {
   title: 'ScalarHub',
   tagline: '',
-  favicon: 'img/favicon1.png',
+  favicon: 'img/favicon.ico',
   url: 'https://docs.scalarhub.ai',
   baseUrl: '/',
   organizationName: 'scalarHubTech',

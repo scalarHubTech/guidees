@@ -9,9 +9,7 @@ info:
     email: support@example.com
   termsOfService: http://example.com/terms/
 servers:
-  - url: https://api.example.com/v1
-    description: Production server
-  - url: http://{{base_url}}/
+  - url: http://localhost:3001/scalarhubio
     description: Local server
 paths:
   /scalartax/s_l_nexuses:
@@ -189,17 +187,17 @@ paths:
         - S_l_Nexuses
       summary: Update S_l_Nexus
       description: This endpoint allows the user to update the nexus information for a specific tenant.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/S_l_Nexus"
       parameters:
         - name: id
           in: path
           schema:
             type: string
           required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/S_l_Nexus"
       responses:
         '200':
           description: OK

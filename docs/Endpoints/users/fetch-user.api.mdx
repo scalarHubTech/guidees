@@ -5,24 +5,19 @@ description: "This endpoint retrieves information about a specific user within t
 sidebar_label: "Fetch User"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1VNtu2zgQ/RVhnroAa0mu3BR8aoBesQUS5PKyhhGMyZHFVBJZkvLGEPTvi5EVx6nb3T5s9SJpeGbmHM6lh4ibAHIJt4F8gJUATUF546KxLUi4qUxIqNXOmjYmnqI3tKWQmLa0vkFGJbi2XUwwCY6UKY1KukA++dvEyrRJrCgJCmv0ER9mIMChx4YiZ5PLHlpsCCQYDQIMZ3QYKxAQVEUNguwh7hwjQvSm3cAgwNO3znjSIKPvaFixJTjbBgqMn2cZv57ruPgTBCjbRmojn6JztVEj//Q+MKQ/TWnX96QiCKAHbFxNfGQ0SLi9vppn8yLPsiJ/s8gXhVqoQqtivVbzs6LMQEBpfIh3k7pP3T2uQUCNT7Z3ljYcukFTgwRNjc3fbvhvpmwDAvgWJ+zpobc13Y1cri6+POfyBlWpczojKrBYlKzbE0bSd+vd6NJ2dS2gc/rU+IjECBI47Ms8e5kVN/krOc/lopgtXs//gifn/8IxzcOt/QLTSe+5bkwL3/ci1vX/K6Z49WtiRtywfwQ0FCvLejYUx36OFUhID02ecuFC2hs9cB+T3z72eue50lWMLsg0RWdmU2NxUdNtfqL40lvdqXHI9nFgEMdhZJr2/RoD3XW+Hob0JMAXq7A++K54xEo7driJXBm4Hlnf4MOJ67gQkvPLz8k7q7qG2jhOCwhgPXtMPstm2TRYqMbBeqzg5efkunPOer6jZ4yPNYc9JB4NwmR6ewTjoY/km3BRXpPfGkU/jjZiUkY7G2KD7RGhDxRVlbCo75X2T3vhN6y7aZVEeoipq9G0TG+8j35qnSUcHKapDyBAGs3buLIhMmRf5luuMpu/deR3IJcrAVv0BtdczGUP2gT+1iBLrAP9i9IXV9MW/SP5GcvJiO2Oi451x38g4Cvt9ht7WA0CKkJNfsy+PzhXilw8cjnZtdyIhyn6+P4GhuEfPCgnNw==
+api: eJy1VE1v3DgM/SsGT11AHdsTT1Po1ABtd4stkCIflw6CgJY5Y6W2pUp0NgPD/72gx/nqtLs9bH2xTT1K74mPHIBxG0Gv4TJSiHCloKJogvVsXQcaLmobE+oq72zHSSAOlm4pJrbbuNCioBIsXc8JJtGTsRtrkj5SSP6xXNsu4ZqSaLDBwHi3AAUeA7bEcppeD9BhS6DBVqDAyokeuQYF0dTUIugBeOcFETnYbgujgkBfexuoAs2hp/FKItG7LlIU/DLL5PVcx+nfoMC4jqljWUXvG2sm/ulNFMhweKQrb8gwKKA7bH1DsmQr0HB5frbMlkWeZUX+epWvCrMyRWWKsjTL42KTgYKNDZGvZ3V/9TdYgoIGH2NvHW1l6xZtAxoqal3+Zit/C+NaUCC3OGMPF4Nr6Hricnb68TmX12g2VU7HRAUWq43oDoRM1XW5m1K6vmkU9L46DN4jkUGDbPsyz15mxUV+pJe5XhWL1avlZ3hM/i+c0Hy4tV9gOus9qVrbwfdexKb5f8UUR78mZsKN+0dBS1w70bMlnvzMNWhIH0yeSuFiOthqFB9TuL33eh+k0jWz12naOINN7SLroyzL5/S6L607EP5RoMl+JxC/S/dNPrUs9wvnU/IF3h2kTm2dnHz6kLx1pm+p48nzoEBY7TH5Iltkc3ugmdrjvg6fPiTnvfcuiNJn9OeWEDumcQ/hJ3aeQ2+ewKR1mUIbTzfnFG6toR/vNmFSQXsXucXuCaH3xKZORNT3SofH7v4NQ2seCEx3nPoGbSf0pvsYZgOs4SFh7t0ICrStZKZKmQUyDCVGugzNOEr4a09hB3p9peAWg8VSirkeoLJRvivQG2wi/YvSF2fzLPwj+RnLOYjdToqOTS9/oOAL7fZzd7waFdSEFYXp9P3CiTHk+UnKwcQUIz70wp/vLmAcvwGX4BJD
 sidebar_class_name: "get api-method"
 info_path: reference//Endpoints/Users/scalartax
 custom_edit_url: null
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Heading from "@theme/Heading";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
 
 <Heading
   as={"h1"}
@@ -51,110 +46,26 @@ This endpoint retrieves information about a specific user within the scalartax.
 >
 </Heading>
 
-<details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
 >
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Path Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"id","in":"path","schema":{"type":"string"},"required":true,"enumDescriptions":[]}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          OK
-          
-          
-        </div><div>
-          <MimeTabs
-            className={"openapi-tabs__mime"}
-            schemaType={"response"}
-          >
-            <TabItem
-              label={"application/json"}
-              value={"application/json"}
-            >
-              <SchemaTabs
-                className={"openapi-tabs__schema"}
-              >
-                <TabItem
-                  label={"Schema"}
-                  value={"Schema"}
-                >
-                  <details
-                    style={{}}
-                    className={"openapi-markdown__details response"}
-                    data-collapsed={false}
-                    open={true}
-                  >
-                    <summary
-                      style={{}}
-                      className={"openapi-markdown__details-summary-response"}
-                    >
-                      <strong>
-                        Schema
-                      </strong>
-                    </summary><div
-                      style={{"textAlign":"left","marginLeft":"1rem"}}
-                    >
-                      
-                    </div><ul
-                      style={{"marginLeft":"1rem"}}
-                    >
-                      <div
-                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
-                      >
-                        
-                        
-                        object
-                        
-                        
-                      </div>
-                    </ul>
-                  </details>
-                </TabItem><TabItem
-                  label={"Example (from schema)"}
-                  value={"Example (from schema)"}
-                >
-                  <ResponseSamples
-                    responseExample={"{\n  \"id\": \"USR20241004185154c5c4dc4bbc274f0\",\n  \"first_name\": \"Hujab\",\n  \"last_name\": \"Doeg\",\n  \"email\": \"demo1@gmail.com\",\n  \"username\": \"demo1@gmail.com\",\n  \"role_id\": \"ROL202410041851548acfd1e7ee4a45f\",\n  \"created_by_id\": null,\n  \"updated_by_id\": null,\n  \"created_at\": \"2024-10-04T13:21:54.562Z\",\n  \"updated_at\": \"2024-10-04T13:21:54.562Z\",\n  \"role\": {\n    \"id\": \"ROL202410041851548acfd1e7ee4a45f\",\n    \"name\": \"Admin\",\n    \"description\": \"all\",\n    \"created_by_id\": null,\n    \"updated_by_id\": null,\n    \"created_at\": \"2024-10-04T13:21:54.432Z\",\n    \"updated_at\": \"2024-10-04T13:21:54.432Z\"\n  }\n}"}
-                    language={"json"}
-                  >
-                    
-                  </ResponseSamples>
-                </TabItem>
-              </SchemaTabs>
-            </TabItem>
-          </MimeTabs>
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
-</div>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","example":{"id":"USR20241004185154c5c4dc4bbc274f0","first_name":"Hujab","last_name":"Doeg","email":"demo1@gmail.com","username":"demo1@gmail.com","role_id":"ROL202410041851548acfd1e7ee4a45f","created_by_id":null,"updated_by_id":null,"created_at":"2024-10-04T13:21:54.562Z","updated_at":"2024-10-04T13:21:54.562Z","role":{"id":"ROL202410041851548acfd1e7ee4a45f","name":"Admin","description":"all","created_by_id":null,"updated_by_id":null,"created_at":"2024-10-04T13:21:54.432Z","updated_at":"2024-10-04T13:21:54.432Z"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
       

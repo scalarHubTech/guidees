@@ -5,24 +5,19 @@ description: "Delete Exemption Certificate"
 sidebar_label: "Delete Exemption Certificate"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFVEFu2zAQ/AqxpxYgLKdILzw1jR0gbdAUdYoeDCOgqXXEVCIZcpXaEPT3YilHcWoD9cUSNTsczs6yA9IPCdQS5ltsAlnvxCVGshtrNGGClYSgo26QMDKuA6cbBAW2BAnWgYKgqQIJyVTYaFAd0C4wIlG07gF6CRGfWhuxBEWxxX7FKyl4lzAx/sN0yn8lJhNt1gAKbr9OXiWZV0mixBoJS5FaYzClTVvXuwnvcj49P6b55klc+daVE3HZJvINRvHHUiWoQrEIaJhWXM+EG4EgwXhH6IjpdAg1b2y9Kx4Tc3bHR/XrRzQEEnCrm1Ajf8IYfQQF47avUqDnn4SPpw5+7Qij07VYYHzGKOaZh+FvcbPsgzjZN5DQIFW+BAWDXyCHPikoktG1jqS3Bb7U3h8YnIrOlj03NO8/NL2NNSioiEJSRaGDnexPOjG+KZ7P4F9136MvW5N1DTzQy0MaVRRdt9YJ79tY931xRHDjja7H2hXLMW20tFuw+UNwPqOOGC9aPtfYC2Z/iSO/rzMI5P7hysdGEyj48usuu2rdxudyS9w4WGR77vT2SNLJPCZx8f1azLxpG3SUcwIS2Lih6GwynUz3kdImR2o/QVy3aEPwkZPzxppDc9MAyelqtGXUfunTAYwHgDA26XbDubEGT7NlTMHo4BM12h0I+k+i3pgx2k24pSLU2jomzafo9lFbwhi1PBqnwgYSlC35mql8Iq4ZYvGTU8HLTy3GHajlSsKzjlavuUnLDkqb+LkEtdF1wiN54wjDux/76+e9AHla9n5Rux33Ttctv4GE37gbrrp+1UuoUJcY8+7DhwtjMNBBydFlwcEdJ3E2v5nfzaHv/wKQz+Nf
+api: eJyFVNFu0zAU/RXrPoFkNR2MFz8x1k4aTAzRIR6qCrnO7eKR2J59M1pF+Xd0nazraCX60sQ5997jc47dAen7BGoJ8y02gax34hIj2Y01mjDBSkLQUTdIGBnXgdMNggJbggTrQEHQVIGEZCpsNKgOaBcYkShadw+9hIiPrY1YgqLYYr/ilRS8S5gY/2465b8Sk4k2cwAFt18mL5TMCyVRYo2EpUitMZjSpq3r3YSnnE/Pj9t89SSufOvKibhsE/kGo/hjqRJUoVgENNxWXM+E2wNBgvGO0BG30yHUPNh6Vzwk7tkdb9WvH9AQSMCtbkKN/Alj9BEU7Me+UIGefxI+nNr4tSOMTtdigfEJo5jnPgx/jZtlHcRJ30BCg1T5EhQMeoEcfFJQJKNrHUlvC3yu/XUgcCo6W/ZsaJ4/mN7GGhRUREEVRe2NriufSL2fTs/GflW7th7+JXnDUDF0AjY+oWmjpd2CJRzs/4Q6Yrxomd1eUR71HCp+X2cQyPHhysdGEyj4/PMua2PdxudySyw/LDKpO709onQyVUlcfLsWM2/aBh1lt0ECb38oOptMJ9MxGNrkYIzngOsWbQg+sv+vdBrDMDG+KdIAyRlptGXUuPTxAMYxJoxNut2w+9bg6W4ZUzA6+ESNdgeE/pOLV2Ls5SbcUhFqbR03zbvoxsAsYR+YHPBTkQEJypZ8WXAsuKbr1jrhj1j3PS8/thh3oJYrCU86Wr1mk5YdlDbxcwlqo+uER/T2BxHefB8vkbcC5Gna46J2O/ZO1y2/gYTfuBsurH7VS6hQlxjz9OHDhTEY6KDk6MhzcPfnaTa/md/Noe//AiDDzms=
 sidebar_class_name: "delete api-method"
 info_path: reference//Endpoints/Exemption Certificates/scalartax
 custom_edit_url: null
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Heading from "@theme/Heading";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
 
 <Heading
   as={"h1"}
@@ -51,136 +46,26 @@ Delete Exemption Certificate
 >
 </Heading>
 
-<details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
 >
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Path Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"id","in":"path","schema":{"type":"string"},"required":true,"enumDescriptions":[]}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          OK.Exemption certificate deleted successfully.
-          
-          
-        </div><div>
-          
-        </div>
-      </TabItem><TabItem
-        label={"404"}
-        value={"404"}
-      >
-        <div>
-          
-          
-          Not Found. Customer with the Specific ID not Found.
-          
-          
-        </div><div>
-          <MimeTabs
-            className={"openapi-tabs__mime"}
-            schemaType={"response"}
-          >
-            <TabItem
-              label={"application/json"}
-              value={"application/json"}
-            >
-              <SchemaTabs
-                className={"openapi-tabs__schema"}
-              >
-                <TabItem
-                  label={"Schema"}
-                  value={"Schema"}
-                >
-                  <details
-                    style={{}}
-                    className={"openapi-markdown__details response"}
-                    data-collapsed={false}
-                    open={true}
-                  >
-                    <summary
-                      style={{}}
-                      className={"openapi-markdown__details-summary-response"}
-                    >
-                      <strong>
-                        Schema
-                      </strong>
-                    </summary><div
-                      style={{"textAlign":"left","marginLeft":"1rem"}}
-                    >
-                      
-                    </div><ul
-                      style={{"marginLeft":"1rem"}}
-                    >
-                      <div
-                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
-                      >
-                        
-                        
-                        object
-                        
-                        
-                      </div>
-                    </ul>
-                  </details>
-                </TabItem><TabItem
-                  label={"Example (from schema)"}
-                  value={"Example (from schema)"}
-                >
-                  <ResponseSamples
-                    responseExample={"{\n  \"error\": \"Customer Not Found.\"\n}"}
-                    language={"json"}
-                  >
-                    
-                  </ResponseSamples>
-                </TabItem>
-              </SchemaTabs>
-            </TabItem>
-          </MimeTabs>
-        </div>
-      </TabItem><TabItem
-        label={"500"}
-        value={"500"}
-      >
-        <div>
-          
-          
-          Internal Server Error
-          
-          
-        </div><div>
-          
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
-</div>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK.Exemption certificate deleted successfully."},"404":{"description":"Not Found. Customer with the Specific ID not Found.","content":{"application/json":{"schema":{"type":"object","example":{"error":"Customer Not Found."}}}}},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
       
