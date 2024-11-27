@@ -4,7 +4,6 @@ title: Using Postman
 sidebar_position: 5
 ---
 
-<<<<<<< Updated upstream
 # ScalarHub REST API Collection
 
 ### What is an API Collection?
@@ -56,13 +55,3 @@ Once the setup is complete, you can start making API calls:
 3. Refer to the [Scalarhub API Reference](https://docs.scalarhub.ai/reference/api-reference) for detailed documentation on API behavior.
 
 
-=======
-ScalarHub REST API Collection
-What is an API Collection?
-An API Collection for ScalarHub includes pre-configured requests and workflows for interacting with ScalarHub APIs. By importing the ScalarTax API Collection into Postman, developers can quickly test endpoints and understand the API's capabilities.
-
-Why use an API Collection?
-The ScalarHub API Collection simplifies the process of testing and exploring the ScalarTax API. It includes predefined configurations for authentication, request payloads, and sample data, making it easy to get started without manual setup.
-
-Prerequisites
->>>>>>> Stashed changes
