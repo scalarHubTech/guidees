@@ -351,166 +351,128 @@ components:
     Customer:
       type: object
       properties:
-        id:
-          type: string
-          description: Unique identifier for the customer
-        customer_name:
-          type: string
-          description: The name of the customer
-        external_customer_id:
-          type: string
-          description: External identifier for the customer
-        contact_id:
-          type: string
-          description: Unique identifier for the contact
-        address_id:
-          type: string
-          description: Unique identifier for the address
-        tax_exemption_status:
-          type: boolean
-          description: Indicates if the customer has a tax exemption
-        customer_code:
-          type: string
-          description: Internal code for the customer
-        alternate_id:
-          type: string
-          description: Alternate identifier for the customer
-        taxpayer_id:
-          type: string
-          description: Taxpayer identifier
-        last_transaction:
-          type: string
-          format: date-time
-          description: Date and time of the last transaction
-        customer_labels:
-          type: string
-          description: Labels associated with the customer
-        exposure_zones:
-          type: string
-          description: Exposure zone of the customer
-        created_by_id:
-          type: string
-          description: ID of the user who created the customer
-        updated_by_id:
-          type: string
-          description: ID of the user who last updated the customer
-        created_at:
-          type: string
-          format: date-time
-          description: Timestamp when the customer was created
-        updated_at:
-          type: string
-          format: date-time
-          description: Timestamp when the customer was last updated
-        external_address:
+        customer:
           type: object
           properties:
-            id:
+            entity_id:
               type: string
-              description: Unique identifier for the address
-            address_line1:
+              description: Unique identifier for the customer entity
+            customer_name:
               type: string
-              description: First line of the address
-            address_line2:
+              description: The name of the customer
+            external_customer_id:
               type: string
-              description: Second line of the address (optional)
-            city:
-              type: string
-              description: City of the address
-            address_string:
-              type: string
-              description: Full address string
-            state:
-              type: string
-              description: State of the address
-            zip_code:
-              type: string
-              description: ZIP code of the address
-            country:
-              type: string
-              description: Country of the address
-            created_at:
-              type: string
-              format: date-time
-              description: Timestamp when the address was created
-            updated_at:
-              type: string
-              format: date-time
-              description: Timestamp when the address was last updated
-        contact:
-          type: object
-          properties:
-            id:
+              description: External identifier for the customer
+            contact_id:
               type: string
               description: Unique identifier for the contact
-            name:
-              type: string
-              description: Name of the contact
             address_id:
               type: string
-              description: Address ID of the contact (can be null)
-            email:
+              description: Unique identifier for the address
+            tax_exemption_status:
+              type: boolean
+              description: Indicates if the customer has a tax exemption
+            customer_code:
               type: string
-              format: email
-              description: Email address of the contact
-            phone:
+              description: Internal code for the customer
+            alternate_id:
               type: string
-              description: Phone number of the contact
-            fax_number:
+              description: Alternate identifier for the customer
+            taxpayer_id:
               type: string
-              description: Fax number of the contact
-            contact_type:
-              type: string
-              description: Type of contact (e.g., Individual, Business)
-            created_at:
-              type: string
-              format: date-time
-              description: Timestamp when the contact was created
-            updated_at:
+              description: Taxpayer identifier
+            last_transaction:
               type: string
               format: date-time
-              description: Timestamp when the contact was last updated
-        tax_exemption:
-          type: object
-          properties:
-            id:
+              description: Date and time of the last transaction
+            customer_labels:
+              type: array
+              items:
+                type: string
+              description: Labels associated with the customer
+            exposure_zones:
+              type: array
+              items:
+                type: string
+              description: Exposure zones of the customer
+            created_by_id:
               type: string
-              description: Unique identifier for the tax exemption
-            customer_id:
+              description: ID of the user who created the customer
+            updated_by_id:
               type: string
-              description: ID of the customer associated with the tax exemption
-            effective_date:
-              type: string
-              format: date-time
-              description: Effective date of the tax exemption
-            exemption_reason:
-              type: string
-              description: Reason for the tax exemption
-            created_at:
-              type: string
-              format: date-time
-              description: Timestamp when the tax exemption was created
-            updated_at:
-              type: string
-              format: date-time
-              description: Timestamp when the tax exemption was last updated
-      required:
-        - id
-        - customer_name
-        - external_customer_id
-        - contact_id
-        - address_id
-        - tax_exemption_status
-        - customer_code
-        - alternate_id
-        - taxpayer_id
-        - last_transaction
-        - customer_labels
-        - exposure_zones
-        - created_by_id
-        - updated_by_id
-        - created_at
-        - updated_at
-        - external_address
-        - contact
-        - tax_exemption
+              description: ID of the user who last updated the customer
+            tax_exemption:
+              type: object
+              properties:
+                effective_date:
+                  type: string
+                  format: date-time
+                  description: Effective date of the tax exemption
+                exemption_reason:
+                  type: string
+                  description: Reason for the tax exemption
+            contact:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the contact
+                address_id:
+                  type: string
+                  description: Address ID of the contact
+                email:
+                  type: string
+                  format: email
+                  description: Email address of the contact
+                phone:
+                  type: string
+                  description: Phone number of the contact
+                fax_number:
+                  type: string
+                  description: Fax number of the contact
+                contact_type:
+                  type: string
+                  description: Type of contact (e.g., Primary, Secondary)
+            external_address:
+              type: object
+              properties:
+                address_line1:
+                  type: string
+                  description: First line of the address
+                address_line2:
+                  type: string
+                  description: Second line of the address (optional)
+                city:
+                  type: string
+                  description: City of the address
+                address_string:
+                  type: string
+                  description: Full address string
+                state:
+                  type: string
+                  description: State of the address
+                zip_code:
+                  type: string
+                  description: ZIP code of the address
+                country:
+                  type: string
+                  description: Country of the address
+          required:
+            - entity_id
+            - customer_name
+            - external_customer_id
+            - contact_id
+            - address_id
+            - tax_exemption_status
+            - customer_code
+            - alternate_id
+            - taxpayer_id
+            - last_transaction
+            - customer_labels
+            - exposure_zones
+            - created_by_id
+            - updated_by_id
+            - tax_exemption
+            - contact
+            - external_address
+    

@@ -22,7 +22,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Products"
+              $ref: "#/components/schemas/Product"
         description: Product object
         required: true               
       responses:
@@ -31,7 +31,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Products"
+                $ref: "#/components/schemas/Product"
                 example:
                   message: Products created successfully
                   products:
@@ -88,7 +88,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Products"
+                $ref: "#/components/schemas/Product"
                 example:
                   - id: string
                     product_code: string
@@ -133,7 +133,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Products"
+                $ref: "#/components/schemas/Product"
                 example:
                   id: PRD20241005153042260bf851f1b44e3
                   product_code: '126'
@@ -172,7 +172,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Products"
+              $ref: "#/components/schemas/Product1"
         required: true
       responses:
         '200':
@@ -180,7 +180,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Products"
+                $ref: "#/components/schemas/Product1"
                 example:
                   updated_by_id: string
                   product_code: string
@@ -254,67 +254,118 @@ components:
       scheme: bearer
       bearerFormat: JWT
   schemas:
-    Products:
-      type: array
-      items:
-        $ref: '#/components/schemas/Product'
-    
     Product:
       type: object
       properties:
-        product_code:
-          type: string
-          example: "123745"
-        description:
-          type: string
-          example: "Nice"
-        tax_code:
-          type: string
-          example: "TX459"
-        product_group:
-          type: string
-          example: "Laptop"
-        category:
-          type: string
-          example: "Lenovo"
-        entity_id:
-          type: string
-          example: "ENT20241005142022f498b677a0dc4dd"
-        created_by_id:
-          type: string
-          nullable: true
-          example: null
-        updated_by_id:
-          type: string
-          nullable: true
-          example: null
-        product_attributes:
+        products:
           type: array
           items:
-            $ref: '#/components/schemas/ProductAttribute'
-      required:
-        - product_code
-        - description
-        - tax_code
-        - product_group
-        - category
-        - entity_id
-        - created_by_id
-        - updated_by_id
-        - product_attributes
-    ProductAttribute:
+            type: object
+            properties:
+              product_code:
+                type: string
+                description: The unique code for the product
+              description:
+                type: string
+                description: A brief description of the product
+              tax_code:
+                type: string
+                description: Tax code associated with the product
+              product_group:
+                type: string
+                description: The product group (e.g., electronics, accessories)
+              category:
+                type: string
+                description: The category of the product (e.g., mobile, laptop)
+              entity_id:
+                type: string
+                description: ID of the entity associated with the product
+              created_by_id:
+                type: string
+                description: ID of the user who created the product (nullable)
+              updated_by_id:
+                type: string
+                description: ID of the user who last updated the product (nullable)
+              product_attributes:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    attribute_name:
+                      type: string
+                      description: The name of the product attribute (e.g., Color, Battery Life)
+                    attribute_value:
+                      type: string
+                      description: The value for the product attribute (e.g., Black, 12 hours)
+                    attribute_unit_of_measure:
+                      type: string
+                      description: The unit of measurement for the attribute (nullable)
+            required:
+              - product_code
+              - description
+              - tax_code
+              - product_group
+              - category
+              - entity_id
+              - product_attributes
+    Product1:
       type: object
       properties:
-        attribute_name:
-          type: string
-          example: "Color"
-        attribute_value:
-          type: string
-          example: "White"
-        attribute_unit_of_measure:
-          type: string
-          example: "N/A"
-      required:
-        - attribute_name
-        - attribute_value
-        - attribute_unit_of_measure
+        product:
+          type: object
+          properties:
+            products:
+              type: array
+              items:
+                type: object
+                properties:
+                  product_code:
+                    type: string
+                    description: Unique identifier for the product
+                  product_group:
+                    type: string
+                    description: Category of the product (e.g., Electronics, Accessories)
+                  category:
+                    type: string
+                    description: Subcategory of the product (e.g., Laptop, Mouse)
+                  description:
+                    type: string
+                    description: Detailed description of the product
+                  tax_code:
+                    type: string
+                    description: Tax code associated with the product
+                  entity_id:
+                    type: string
+                    description: Unique identifier for the entity the product belongs to
+                  created_by_id:
+                    type: string
+                    description: ID of the user who created the product (nullable)
+                  updated_by_id:
+                    type: string
+                    description: ID of the user who last updated the product (nullable)
+                  product_attributes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        attribute_name:
+                          type: string
+                          description: Name of the product attribute (e.g., Color, Battery Life)
+                        attribute_value:
+                          type: string
+                          description: Value of the product attribute (e.g., Black, 1.5 Years)
+                        attribute_unit_of_measure:
+                          type: string
+                          description: Unit of measurement for the attribute (nullable)
+                      required:
+                        - attribute_name
+                        - attribute_value
+                        - attribute_unit_of_measure
+                required:
+                  - product_code
+                  - product_group
+                  - category
+                  - description
+                  - tax_code
+                  - entity_id
+                  - product_attributes

@@ -21,7 +21,7 @@ paths:
         content:
           application/json:
             schema:
-              # $ref: "#/components/schema/Customer"
+              $ref: "#/components/schemas/Create_Location_attributes"
         description: Location Attribute object
         required: true
       responses:
@@ -30,8 +30,16 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/Create_Location_attributes"
                 example: 
+                  location_attributes:
+                    - location_id: "LOC123"
+                      attribute_name: "Temperature"
+                      attribute_value: "25"
+                      attribute_unit_of_measure: "Celsius"
+                      updated_by_id: "USR202411291616208c43ff3d3bf0404"
+                      created_by_id: "USR202411291616208c43ff3d3bf0404"
+
         '422':
           description:  Unprocessable Entity. Validation errors occurred during the creation.
           content:
@@ -122,14 +130,15 @@ paths:
         content:
           application/json:
             schema:
-              type: object
+              $ref: "#/components/schemas/Update_Location_attribute"
+        required: true
       responses:
         '200':
           description: OK. Location Attribute Updates Successfully.
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/Update_Location_attribute"
                 example: 
                   attribute_name: string
                   attribute_value: string
@@ -184,3 +193,71 @@ paths:
         '500':
           description: Internal Server Error
 
+components:
+  schemas:
+    Create_Location_attributes:
+      type: object
+      properties:
+        location_attributes:
+          type: array
+          items:
+            type: object
+            properties:
+              location_id:
+                type: string
+                description: "Unique identifier for the location"
+              attribute_name:
+                type: string
+                description: "Name of the attribute (e.g., Temperature)"
+              attribute_value:
+                type: string
+                description: "The value of the attribute (e.g., 25)"
+              attribute_unit_of_measure:
+                type: string
+                description: "The unit of measurement for the attribute (e.g., Celsius)"
+              created_by_id:
+                type: string
+                description: "The ID of the user who created the record"
+              updated_by_id:
+                type: string
+                description: "The ID of the user who last updated the record"
+            required:
+            - location_id
+              - attribute_name
+              - attribute_value
+              - attribute_unit_of_measure
+              - created_by_id
+              - updated_by_id
+    Update_Location_attribute:
+      type: object
+      description: "Represents the attributes of a location, including identification and measurements."
+      properties:
+        location_attribute:
+          type: object
+          properties:
+            location_id:
+              type: string
+              description: "Unique identifier for the location."
+            attribute_name:
+              type: string
+              description: "The name of the attribute being measured (e.g., 'Temperature')."
+            attribute_value:
+              type: string
+              description: "The value of the attribute (e.g., '25')."
+            attribute_unit_of_measure:
+              type: string
+              description: "The unit of measure for the attribute (e.g., 'Celsius')."
+            created_by_id:
+              type: string
+              description: "ID of the user who created this record."
+            updated_by_id:
+              type: string
+              description: "ID of the user who last updated this record."
+          required:
+            - location_id
+            - attribute_name
+            - attribute_value
+            - attribute_unit_of_measure
+            - created_by_id
+            - updated_by_id
+    

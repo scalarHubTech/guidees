@@ -36,16 +36,17 @@ paths:
                 $ref: "#/components/schemas/Entity"
                 example:
                   entity: 
-                    guid: string
                     name: string
+                    guid: string
                     tax_id: string
                     phone: null or string
                     is_online_marketplace: string
+                    parent_entity_id: null or string
                     registration_date: date
                     tax_exemptions_type: string
                     is_default: boolean
-                    created_by_id: null or string
-                    updated_by_id: null or string
+                    created_by_id: string
+                    updated_by_id: string
                   address:  
                     location_code: string            
                     address_type_id: string
@@ -56,8 +57,8 @@ paths:
                     country: string
                     postal_code: string
                     start_date: date
-                    created_by_id: null or string
-                    updated_by_id: null or string
+                    created_by_id: string
+                    updated_by_id: string
         '422':
           description:  Unprocessable Entity. Validation errors occurred during the creation.
           content:
@@ -241,41 +242,51 @@ components:
     Entity:
       type: object
       properties:
-        name:
-          type: string
-          description: Name of the entity
-        address_id:
-          type: string
-          description: Unique identifier for the address (optional)
-        guid:
-          type: string
-          description: Globally unique identifier for the entity
-        tax_id:
-          type: string
-          description: Tax identification number for the entity
-        phone:
-          type: string
-          description: Phone number of the entity (nullable)
-        is_online_marketplace:
-          type: string
-          description: Indicates if the entity operates as an online marketplace (e.g., Yes, No)
-        registration_date:
-          type: string
-          format: date
-          description: Date of registration for the entity
-        tax_exemptions_type:
-          type: string
-          description: Type of tax exemptions applicable to the entity
-        is_default:
-          type: boolean
-          description: Indicates if this is the default entity
-        created_by_id:
-          type: string
-          description: ID of the user who created the entity record (nullable)
-        updated_by_id:
-          type: string
-          description: ID of the user who last updated the entity record (nullable)
-
+        entity:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Name of the entity
+            guid:
+              type: string
+              description: Globally unique identifier for the entity
+            tax_id:
+              type: string
+              description: Tax identification number for the entity
+            phone:
+              type: string
+              description: Phone number of the entity (nullable)
+            is_online_marketplace:
+              type: string
+              description: Indicates if the entity operates as an online marketplace (e.g., Yes, No)
+            parent_entity_id:
+              type: string
+            registration_date:
+              type: string
+              format: date
+              description: Date of registration for the entity
+            tax_exemptions_type:
+              type: string
+              description: Type of tax exemptions applicable to the entity
+            is_default:
+              type: boolean
+              description: Indicates if this is the default entity
+            created_by_id:
+              type: string
+              description: ID of the user who created the product (nullable)
+            updated_by_id:
+              type: string
+              descripiton:  ID of the user who last updated the product (nullable)
+          required:
+            - name
+            - guid
+            - tax_id
+            - guide
+            - is_online_market
+            - registration_date
+            - tax_exemption_type
+            - is_default 
         address:
           type: object
           properties:
@@ -309,10 +320,10 @@ components:
               description: Date when the address becomes effective
             created_by_id:
               type: string
-              description: ID of the user who created the address record (nullable)
+              description: ID of the user who created the product (nullable)
             updated_by_id:
-              type: string
-              description: ID of the user who last updated the address record (nullable)
+              type: string or null
+              descripiton:  ID of the user who last updated the product (nullable)
           required:
             - location_code
             - address_type_id
@@ -323,16 +334,4 @@ components:
             - country
             - postal_code
             - start_date
-            - created_by_id
-            - updated_by_id 
-      required:
-        - name
-        - guid
-        - tax_id
-        - guide
-        - is_online_market
-        - registration_date
-        - tax_exemption_type
-        - is_default
-        - created_by_id
-        - updated_by_id 
+      
