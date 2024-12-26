@@ -5,7 +5,7 @@ description: "This endpoint is used to delete a specific user from the tenants."
 sidebar_label: "Delete User"
 hide_title: true
 hide_table_of_contents: true
-api: eJytkk+L2zAQxb+KmLOIve3NpxaSQ2GhhWRPIYeJPKnVypKqGYcEo+9exkm3+6fHngzyb6T33rwZBL8zdHt4YioMBws9sSs+i08ROtgNng3FPicfxXg2E1NvJJmeAgkZNJzJ+ZN3+qeYU0mjkYGMUMQovAILhTinyMTQzfChbfXz+pXt5Bwxn6Zg/sBgwaUoFEVxzDl4h4o3P1hn5lprtTCSDKmHDm56wEJGGaCDhh0GLIKXRoVxM/u+ggWmclan3X6GqQToYBDJXdOE5DAMiaX72LYP9/FhOvoEb0N5VNTcboJ6sODjKalM8RJI/SzDO7y8G11iNp+/fTHr5KaRoiymwIKqujEPq3bV3v2jW/xHHPVendtOOaciYF/LpwuOOdDKpbHhG6IMjeiVuh99eoFBtSBURv562lI5e0f/vm1hGqVzYhkxvhC0vrVAXb21Ov/d339pkVyzvih0kSYH9FEVLRHM953v4Xnnms5SaAud77XWullF5vmITE8l1KrHvyYqV+j2BwtnLB6Pur/9oVoYCHsqS09+0lXDd46yZnrGMKmUd6XUKjwXcr153Ow2UOtvhzArmQ==
+api: eJytVE1v2zAM/SsCTxtgxOnWXXRah7RAt2Idlg47BDkwMlOrsyVVorsEhv/7QNn9TLfTfLE+Hp/4+Cj1wHidQK/gR6KYYF1ARclEG9h6BxquapsUuSp461jZpLpElWKvKmqISaFKgYzdWiM7UW2jbxXXpJgcOk4zKCBgxJZY+PWqB4ctgQZbQQFWzgjINRSQTE0tgu6B90EQiaN11zAUEOm2s5Eq0Bw7GtaykoJ3iZLg383n8nue+eWXmRJRU6aVSp0xlNK2a5q9kB7Pjw+jvnpWZ75z1RT823Kd9SzvZZ4vlHsAQQHGOybHQoUhNNagUJU3Sfj6Q1V+c0OGoQDaYRsaki2K0UfQ2QT1mAIM8hXw4TV9544pOmzUkuIdRXWaOQTeEte+Ag2j8uwA16ChTAYbjIy7UsxKZW+rQSqfGUZ3utiAhpo56LJsvMGm9on1+/n8aAqvu4318LJRLgSqRiYQhxKZLlreL6UAo0+fCCPFk06SeaiHHHXvvsw3GQTFNDjzsUUGDZ9/XmV11m19DrcsxYNlTuoKdwcp5ZZWJ9/O1cKbriXH2RooQNSOmKPZfDafXESTXZz6U+KWXQg+ilnPyjI5NzO+LdMIyYa2aAU1LX18ApN+Y4ptutyKXdbQ62wZUwo6+MQtuicJLcYbJ6peSu0fu/C/3NjJGqYdl6FB6ySjXIJ+6qUVPPSSVCc/HgVoW8kTIh0jkL7fYKIfsRkGWb7tKO5Br9YF3GG0uBH/Vj1UNsm4Ar3FJtE/tL35Pj0Eb9XfspwW0e3FZ2w6mUEBv2g/PjrDeiigJqwo5tPHjRNjKPCTkIO7LD39cLMWpxenV6cwDH8AwC/LCQ==
 sidebar_class_name: "delete api-method"
 info_path: reference//Endpoints/Users/scalartax
 custom_edit_url: null
@@ -38,8 +38,16 @@ import Heading from "@theme/Heading";
 
 This endpoint is used to delete a specific user from the tenants.
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
 >
   
 </ParamsDetails>
@@ -54,7 +62,7 @@ This endpoint is used to delete a specific user from the tenants.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
+  responses={{"200":{"description":"OK. User deleted successfully"},"404":{"description":"Not Found. User with the Specific ID not Found.","content":{"application/json":{"schema":{"type":"object","example":{"error":"User Not Found."}}}}},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

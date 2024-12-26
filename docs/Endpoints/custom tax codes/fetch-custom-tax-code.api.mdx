@@ -1,0 +1,71 @@
+---
+id: fetch-custom-tax-code
+title: "Fetch Custom Tax Code"
+description: "The response will include the following details of the Custom Tax Code."
+sidebar_label: "Fetch Custom Tax Code"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vktv40YM/isDnrKAajvt9qJT082mSFt0i7UXPQSBQY/oaLYjjTJDxTYM/feCI9mWZAdBH+hJEofDx8ePpPbA+BQgfYAPdWBXqAVu1QeXETwmkFHQ3lRsXAkpLHJSnkLlykBqY6xVptS2zkhxTmrtrHUbUz6pjBiNDcqt48HI7gQSqNBjQUxeHO+hxIIgBZNBAkY8Vcg5JBB0TgVCugfeVaIR2JvyCZoEPD3XxlMGKfuamkeRtJEF0f92NpPHMP5Pv0AC2pVMJcspVpU1GuV0+jWIyr7nkrZYVJbk1WQn3wlQyYZ3y6GQcbvULqPlMFLxlw2+hyEdxbcnseCmW8wYt6o1UNbWJqA9IVO2XI3d11V2+eBwA/koVVei+w2bgt71rr6m0SQH9N3qK2mW8nlXkWfTYi0OxxUa5/mlNM81KZMJeGtDXq2dj+wYZ9oMAP7ndjEEp41kplp7MZFhld6yvthVFFncBaeuaPI0SVTlXVZrTlQg/2J0C1JbpzdN5qTqNuho8RCuuIg3m9GNtwyOiHOwdcCyd7x062WL9vKAwyXzwjRcCfGls8buPsUXtKonjkngpUqO+PpWLvenMnap1IG82uROdZZeo8yI///CkcXAqjP3mrd+U527WjtfxGY6NtF50ZBJYZkpOVWbnMpLrtQGwyHxfpL/h9s+DNAMBu5DO6hPXTruq64Xht7HZBjXbIDqINfHBNiwELJbUQvcyiK5hqaRyN7P3p/P+t8cqztXl9lktH7UxnCuOEdW84q0WRut7m9VedT/OztiPBh7O4O8d/4Y8sn9KbAYfpPA95d21X3J5KXP5uRf0KqPYm4SK1EQ506G/BPFYSy7MoVp0GjRM26noyYP073JGlmn5F8OK7f2FlLImat0OrVOo81d4PS72ey6s5TXK+POKPSrqKrWEsjaDaRrb3g3F1DahfAjoSd/U0tcR4zE1WGly/cqKkHSvdwd2PvzH4uYpSnXLl7vSj+PQS1wexbSCOGgPteWgrr5/V7dOl0XVDJ2FJT020vXk9lk1pUadSx19xci9+Z1VTkfedjHqSvvRLtiGlqVWPUCjWh1oh96anHpkC/Cp/W83RWXrUWdqWhXLnCBZS+gO2Kdj/+ixijsT6T9D//TutoxbXlaWTRlHEMCyb7j3QMceSdojpgHCaQmkw4Wdon2fr/CQF+8bRoRP9fkd5A+PCbwgt60e+dhD5kJ8p5BukYbxluon+zV524wvVOvBdwJsdwJBdDW8gUJ/Em79q+zeWwSyAkz8tF7e3CjNVXcu3I2C4T/x2786aMQ9y963+2E
+sidebar_class_name: "get api-method"
+info_path: reference//Endpoints/Custom Tax Codes/scalartax
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Custom Tax Code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/scalartax/custom_tax_codes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+The response will include the following details of the Custom Tax Code.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"example":{"id":"string","entity_id":"string","tax_code_type":"string","code":"string","description":"string","Description of custom tax code":null,"created_by_id":"string","updated_by_id":"string","created_at":"string (date-time)","updated_at":"string (date-time)"},"type":"object","properties":{"id":{"type":"string","description":"Unique identifier for the custom tax code"},"entity_id":{"type":"string","description":"Unique identifier for the associated entity"},"tax_code_type":{"type":"string","description":"Type of tax code (e.g., product, service)"},"code":{"type":"string","description":"The unique code for the tax type"},"description":{"type":"string","description":"Description of the tax code"},"Description_of_custom_tax_code":{"type":"string","nullable":true,"description":"Optional description for a custom tax code"},"created_by_id":{"type":"string","description":"Identifier of the user who created the custom tax code"},"updated_by_id":{"type":"string","description":"Identifier of the user who last updated the custom tax code"},"created_at":{"type":"string","format":"date-time","description":"Date and time when the custom tax code was created"},"updated_at":{"type":"string","format":"date-time","description":"Date and time when the custom tax code was last updated"}},"required":["id","entity_id","tax_code_type","code","description","created_by_id","updated_by_id","created_at","updated_at"],"title":"CustomTaxCode1"}}}},"404":{"description":"Not Found.Custom Tax Code with that Specific ID not Found.","content":{"application/json":{"schema":{"type":"object","example":{"error":"Custom Tax Code Not Found."}}}}},"500":{"description":"Internal Serval Error."}}}
+>
+  
+</StatusCodes>
+
+
+      

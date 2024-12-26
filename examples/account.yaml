@@ -9,7 +9,7 @@ info:
     email: support@example.com
   termsOfService: http://example.com/terms/
 servers:
-  - url: http://localhost:3001/scalarhubio
+  - url: http://localhost:3000/scalarhubio
     description: Local server
 security:
   - BearerAuth: []
@@ -33,15 +33,28 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Account"
+                $ref: "#/components/schemas/Account1"
                 example:
-                    id: integer
+                    id: string
                     name: string
-                    subscription: integer
-                    createdby_id: null | string
-                    updatedby_id: null | string
-                    created_at: datetime
-                    updated_at: datetime
+                    subscription_id: string
+                    created_by_id: string
+                    updated_by_id: string
+                    plan_name: string
+                    effective_date: datetime
+                    account_status: string
+                    subscription:
+                      id: string
+                      plan_id: string | null
+                      account_id: string
+                      start_date: datetime | null
+                      end_date: datetime | null
+                      due_date: datetime | null
+                      created_by_id: string
+                      updated_by_id: string
+                      status: string
+                      created_at: datetime
+                      updated_at: datetime
         '422':
           description:  Unprocessable Entity. Validation errors occurred during the creation.
           content:
@@ -65,29 +78,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Account"
+                $ref: "#/components/schemas/Account1"
                 example:
                   - id: string
                     name: string
-                    subscription_id: string
-                    created_by_id: string
-                    updated_by_id: string
+                    subscription_id: string 
+                    created_by_id: string 
+                    updated_by_id: string 
+                    plan_name: string
                     effective_date: datetime
                     account_status: string
                     subscription:
                       id: string
-                      name: string
-                      contract_acceptance_date: datetime
-                      contract_termination_date: datetime
-                      contract_effective_date: datetime
-                      contract_end_date: datetime
-                      service_activation_date: datetime
-                      service_end_date: datetime
-                      status: string
-                      billing_cycle: string
-                      billing_amount: boolean
+                      plan_id: string | null
+                      account_id: string
+                      start_date: datetime | null 
+                      end_date: datetime | null
+                      due_date: datetime | null 
                       created_by_id: string
                       updated_by_id: string
+                      status: string
                       created_at: datetime
                       updated_at: datetime
         '400':
@@ -112,31 +122,28 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Account"
+                $ref: "#/components/schemas/Account1"
                 example:
                   id: string
                   name: string
                   subscription_id: string
                   created_by_id: string
                   updated_by_id: string
+                  plan_name: string
                   effective_date: datetime
                   account_status: string
                   subscription:
                     id: string
-                    name: string
-                    contract_acceptance_date: datetime
-                    contract_termination_date: datetime
-                    contract_effective_date: datetime
-                    contract_end_date: datetime
-                    service_activation_date: datetime
-                    service_end_date: datetime
-                    status: string
-                    billing_cycle: string
-                    billing_amount: boolean
+                    plan_id: string | null
+                    account_id: string
+                    start_date: datetime | null
+                    end_date: datetime | null
+                    due_date: datetime | null
                     created_by_id: string
                     updated_by_id: string
+                    status: string
                     created_at: datetime
-                    updated_at: datetime
+                    updated_at: datetime                  
         '404':
           description: Not Found. Account with that Specific ID not Found.
           content:
@@ -157,27 +164,149 @@ components:
     Account:
       type: object
       properties:
-        account_status:
+        company_name:
           type: string
-          description: The status of the account (e.g., Active, Inactive)
+          description: The name of the company
+          example: scalarhub
+        name:
+          type: string
+          description: The name associated with the user
+          example: pro
         username:
           type: string
           description: The username for the account
+          example: chauhanmanoj16358@gmail.com
         first_name:
           type: string
           description: The first name of the user
+          example: Manoj
         last_name:
           type: string
           description: The last name of the user
+          example: Chauhan
         email:
           type: string
           format: email
           description: The email address of the user
+          example: chauhanmanoj16358@gmail.com
+        billing_cycle:
+          type: string
+          description: The billing cycle for the account (e.g., monthly, yearly)
+          example: monthly
+        account_status:
+          type: string
+          description: The status of the account (e.g., Active, Inactive)
+          example: Active
       required:
-        - account_status
+        - company_name
+        - name
         - username
         - first_name
         - last_name
         - email
+        - billing_cycle
+        - account_status
       xml:
         Account
+    Account1:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the account
+          example: ACC20241223161030e7be84318fbc409
+        name:
+          type: string
+          description: The name associated with the user or account
+          example: scalarhubio
+        subscription_id:
+          type: string
+          description: Unique identifier for the associated subscription
+          example: SUB20241223161030c3c43defc53747f
+        created_by_id:
+          type: string
+          description: Identifier of the user who created the account
+          example: USR20241223161030a0122295da864e1
+        updated_by_id:
+          type: string
+          description: Identifier of the user who last updated the account
+          example: USR20241223161030a0122295da864e1
+        plan_name:
+          type: string
+          description: Name of the associated subscription plan
+          example: pro
+        effective_date:
+          type: string
+          format: date-time
+          description: Date when the account becomes effective
+        account_status:
+          type: string
+          enum:
+            - Active
+            - Inactive
+            - Suspended
+          description: The status of the account
+          example: Active
+        subscription:
+          type: object
+          description: Details of the associated subscription
+          properties:
+            id:
+              type: string
+              description: Unique identifier for the subscription
+              example: SUB20241223161030c3c43defc53747f
+            plan_id:
+              type: string
+              description: Unique identifier for the plan associated with the subscription
+              example: PLAN20241223160905b125b57cf84245
+            account_id:
+              type: string
+              description: Unique identifier for the account associated with the subscription
+              example: ACC20241223161030e7be84318fbc409
+            start_date:
+              type: string
+              format: date-time
+              description: Start date of the subscription
+            end_date:
+              type: string
+              format: date-time
+              description: End date of the subscription
+            due_date:
+              type: string
+              format: date-time
+              description: Payment due date for the subscription
+            created_by_id:
+              type: string
+              description: Identifier of the user who created the subscription
+              example: USR20241223161030a0122295da864e1
+            updated_by_id:
+              type: string
+              description: Identifier of the user who last updated the subscription
+              example: USR20241223161030a0122295da864e1
+            status:
+              type: string
+              enum:
+                - ACTIVE
+                - INACTIVE
+                - CANCELED
+              description: Current status of the subscription
+              example: ACTIVE
+            created_at:
+              type: string
+              format: date-time
+              description: Date and time when the subscription was created
+            updated_at:
+              type: string
+              format: date-time
+              description: Date and time when the subscription was last updated
+      required:
+        - id
+        - name
+        - subscription_id
+        - created_by_id
+        - updated_by_id
+        - plan_name
+        - effective_date
+        - account_status
+        - subscription
+  

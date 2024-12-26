@@ -13,52 +13,6 @@ servers:
     description: Local server
 paths:
   /scalartax/subscriptions:
-    post:
-      tags:
-        - Subscriptions
-      summary: Create Subscription
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Subscription"
-        description: Subscription object
-        required: true
-      responses:
-        '201':
-          description: Subscription Created Successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Subscription'
-                example:
-                  id: string
-                  name: string
-                  contract_acceptance_date: datetime
-                  contract_termination_date: datetime
-                  contract_effective_date: datetime
-                  contract_end_date: datetime
-                  service_activation_date: datetime
-                  service_end_date: datetime
-                  status: string
-                  billing_cycle: string
-                  billing_amount: boolean
-                  created_by_id: string
-                  updated_by_id: string
-                  created_at: datetime
-                  updated_at: datetime
-        '422':
-          description:  Unprocessable Entity. Validation errors occurred during the creation.
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  errors: [ { name : [can't be blank],account_id : [must exist]} ]
-        '400':
-          description: Bad Request
-        '500':
-          description: Internal Server Error
     get:
       tags:
         - Subscriptions
@@ -73,21 +27,42 @@ paths:
                 $ref: "#/components/schemas/Subscription"
                 example: 
                   - id: string
-                    name: string
-                    contract_acceptance_date: datetime
-                    contract_termination_date: datetime
-                    contract_effective_date: datetime
-                    contract_end_date: datetime
-                    service_activation_date: datetime
-                    service_end_date: datetime
-                    status: string
-                    billing_cycle: string
-                    billing_amount: boolean
+                    plan_id: string
+                    account_id: string
+                    start_date: string
+                    end_date: datetime
+                    due_date: string
                     created_by_id: string
                     updated_by_id: string
+                    status: string
                     created_at: datetime
                     updated_at: datetime
-
+                    remaining_days: number
+                    account:
+                      id: string
+                      name: string
+                      subscription_id: string
+                      created_by_id: string
+                      updated_by_id: string
+                      plan_name: string
+                      effective_date: datetime
+                      account_status: string
+                    plan:
+                      id: string
+                      name: string
+                      description: string
+                      list_price: float
+                      discount_price: float
+                      effective_price: float
+                      total_price: float
+                      discount_start: null || number
+                      discount_end: null || number
+                      max_users: number
+                      created_by_id: string
+                      updated_by_id: string
+                      billing_cycle: string
+                      created_at: datetime
+                      updated_at: datetime
         '400':
           description: Bad Request
         '500':
@@ -112,21 +87,43 @@ paths:
               schema:
                 $ref: "#/components/schemas/Subscription"
                 example: 
-                  id: string
-                  name: string
-                  contract_acceptance_date: datetime
-                  contract_termination_date: datetime
-                  contract_effective_date: datetime
-                  contract_end_date: datetime
-                  service_activation_date: datetime
-                  service_end_date: datetime
-                  status: string
-                  billing_cycle: string
-                  billing_amount: boolean
-                  created_by_id: string
-                  updated_by_id: string
-                  created_at: datetime
-                  updated_at: datetime
+                  - id: string
+                    plan_id: string
+                    account_id: string
+                    start_date: string
+                    end_date: datetime
+                    due_date: string
+                    created_by_id: string
+                    updated_by_id: string
+                    status: string
+                    created_at: datetime
+                    updated_at: datetime
+                    remaining_days: number
+                    account:
+                      id: string
+                      name: string
+                      subscription_id: string
+                      created_by_id: string
+                      updated_by_id: string
+                      plan_name: string
+                      effective_date: datetime
+                      account_status: string
+                    plan:
+                      id: string
+                      name: string
+                      description: string
+                      list_price: float
+                      discount_price: float
+                      effective_price: float
+                      total_price: float
+                      discount_start: null || number
+                      discount_end: null || number
+                      max_users: number
+                      created_by_id: string
+                      updated_by_id: string
+                      billing_cycle: string
+                      created_at: datetime
+                      updated_at: datetime
         '404':
           description: Not Found. Subscription with that Specific ID not Found.
           content:
@@ -137,90 +134,6 @@ paths:
                   error: Subscription Not Found.
         '500':
           description: Internal Serval Error.
-    put:
-      tags:
-        - Subscriptions
-      summary: Update Subscription
-      description: This API endpoint is used to update the details of a specific Transaction.
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Subscription"
-        required: true
-      responses:
-        '200':
-          description: OK. Subscription Updated Successfully.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Subscription"
-                example:
-                  name: string
-                  contract_acceptance_date: datetime
-                  contract_termination_date: datetime
-                  contract_effective_date: datetime
-                  contract_end_date: datetime
-                  service_activation_date: datetime
-                  service_end_date: datetime
-                  status: string
-                  billing_cycle: string
-                  billing_amount: boolean
-                  created_by_id: string
-                  updated_by_id: string
-                  id: string
-                  created_at: datetime
-                  updated_at: datetime
-        '400':
-          description: Bad Request
-        '404':
-          description: Not Found.Customer with that Specific ID not Found.
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  error: Customer Not Found.
-        '422':
-          description: Unprocessable Entity. Validation errors occurred during the update.
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  errors: [ { ststus : [ is invalid ] } ]
-        '500':
-          description: Internal Server Error
-    delete: 
-      tags:
-        - Subscriptions
-      summary: Delete Subscription
-      description: This endpoint sends an HTTP DELETE request to the specified subscription ID 
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Ok. Subscription deleted successfully
-        '404':
-          description: Not Found. Subscription with the Specific ID not Found.
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  error: Subscription Not Found.
-        '500':
-          description: Internal Server Error
 components:
   securitySchemes:
     BearerAuth:
@@ -231,76 +144,181 @@ components:
     Subscription:
       type: object
       properties:
-        subscription:
-          type: object
-          properties:
-            name:
-              type: string
-              description: Name of the subscription
-              required: true
-            contract_acceptance_date:
-              type: string
-              format: date-time
-              description: The date when the contract was accepted
-              required: true
-            contract_termination_date:
-              type: string
-              format: date-time
-              description: The date when the contract was terminated
-              required: false
-            contract_effective_date:
-              type: string
-              format: date-time
-              description: The date when the contract becomes effective
-              required: true
-            contract_end_date:
-              type: string
-              format: date-time
-              description: The date when the contract ends
-              required: true
-            service_activation_date:
-              type: string
-              format: date-time
-              description: The date when the service is activated
-              required: true
-            service_end_date:
-              type: string
-              format: date-time
-              description: The date when the service ends
-              required: true
-            status:
-              type: string
-              description: Current status of the subscription
-              required: true
-            billing_cycle:
-              type: string
-              description: The billing cycle (e.g., monthly, yearly)
-              required: true
-            billing_amount:
-              type: boolean
-              description: Indicates if billing is enabled or not
-              required: true
-            created_by_id:
-              type: string
-              description: ID of the user who created the subscription
-              required: false
-            updated_by_id:
-              type: string
-              description: ID of the user who last updated the subscription
-              required: false
-          required:
-            - name
-            - contract_acceptance_date
-            - contract_termination_date
-            - contract_effective_date
-            - contract_end_date
-            - service_activation_date
-            - service_end_date
-            - status
-            - billing_cycle
-            - billing_amount
-            - created_by_id
-            - updated_by_id
+        id:
+          type: string
+          description: Unique identifier for the subscription
+        plan_id:
+          type: string
+          description: Unique identifier for the associated plan
+        account_id:
+          type: string
+          description: Unique identifier for the associated account
+        start_date:
+          type: string
+          format: date-time
+          description: Start date of the subscription
+        end_date:
+          type: string
+          format: date-time
+          description: End date of the subscription
+        due_date:
+          type: string
+          format: date-time
+          description: Payment due date for the subscription
+        created_by_id:
+          type: string
+          description: Identifier of the user who created the subscription
+        updated_by_id:
+          type: string
+          description: Identifier of the user who last updated the subscription
+        status:
+          type: string
+          enum:
+            - ACTIVE
+            - INACTIVE
+            - CANCELED
+          description: Current status of the subscription
+        created_at:
+          type: string
+          format: date-time
+          description: Date and time when the subscription was created
+        updated_at:
+          type: string
+          format: date-time
+          description: Date and time when the subscription was last updated
+        remaining_days:
+          type: integer
+          description: Number of remaining days in the subscription
+        account:
+          $ref: "#/components/schemas/Account"
+        plan:
+          $ref: "#/components/schemas/Plan"
       required:
-        - subscription
-  
+        - id
+        - plan_id
+        - account_id
+        - start_date
+        - end_date
+        - due_date
+        - created_by_id
+        - updated_by_id
+        - status
+        - created_at
+        - updated_at
+        - account
+        - plan
+
+    Account:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the account
+        name:
+          type: string
+          description: Name of the account
+        subscription_id:
+          type: string
+          description: Subscription ID associated with the account
+        created_by_id:
+          type: string
+          description: Identifier of the user who created the account
+        updated_by_id:
+          type: string
+          description: Identifier of the user who last updated the account
+        plan_name:
+          type: string
+          description: Name of the associated subscription plan
+        effective_date:
+          type: string
+          format: date-time
+          description: Date when the account becomes effective
+        account_status:
+          type: string
+          enum:
+            - Active
+            - Inactive
+            - Suspended
+          description: Current status of the account
+      required:
+        - id
+        - name
+        - subscription_id
+        - created_by_id
+        - updated_by_id
+        - plan_name
+        - effective_date
+        - account_status
+    
+    Plan:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the plan
+        name:
+          type: string
+          description: Name of the plan
+        description:
+          type: string
+          description: Description of the plan
+        list_price:
+          type: number
+          format: float
+          description: Original price of the plan
+        discount_price:
+          type: number
+          format: float
+          description: Discounted price of the plan
+        effective_price:
+          type: number
+          format: float
+          description: Final effective price after applying discounts
+        total_price:
+          type: number
+          format: float
+          description: Total price of the plan
+        discount_start:
+          type: string
+          format: date-time
+          nullable: true
+          description: Start date for any discounts (if applicable)
+        discount_end:
+          type: string
+          format: date-time
+          nullable: true
+          description: End date for any discounts (if applicable)
+        max_users:
+          type: integer
+          description: Maximum number of users allowed under the plan
+        created_by_id:
+          type: string
+          nullable: true
+          description: Identifier of the user who created the plan
+        updated_by_id:
+          type: string
+          nullable: true
+          description: Identifier of the user who last updated the plan
+        billing_cycle:
+          type: string
+          enum:
+            - MONTHLY
+            - QUARTERLY
+            - ANNUAL
+          description: Billing cycle of the plan
+        created_at:
+          type: string
+          format: date-time
+          description: Date and time when the plan was created
+        updated_at:
+          type: string
+          format: date-time
+          description: Date and time when the plan was last updated
+      required:
+        - id
+        - name
+        - list_price
+        - effective_price
+        - billing_cycle
+        - created_at
+        - updated_at

@@ -1,0 +1,71 @@
+---
+id: delete-transaction
+title: "Delete Transaction"
+description: "This endpoint is used to delete a specific transaction for a tenant."
+sidebar_label: "Delete Transaction"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v00AQ/SurOYFkxSmUi08UJZUKFUUkiEMUVZP1pN5i7253xyWR5f+OxnYTtymc8MXe9Zs3H+/tNsB4FyFbwTKgjajZOBthnUBOUQfjZQ0ZLAsTFdncO2NZmajqSLlip3IqiUmhip602Rqt+Eikti4oVEwWLU8gAY8BK2IKkrIBixVBBiaHBIyk8cgFJBB1QRVC1gDvvSAiB2PvoE0g0ENtAuWQcaipXctO9M5GioJ/N53K63nxN18matTeUHOuYq01xbity3Iv3OfT89Pgr47Vpatt/pzjt+FCcUFq8dT31UzZAxYS0M4yWRZG9L40GiUwvY9C25z26Db3pBkSoB1WviT5RSG4IOMfZT4WBK08CXx4rekryxQslmpB4ZGCmndUAq+IC5dDBv0cOlm4gAzSqLHEwLhL4215a2lXR4ppY/JWROl4euHqUEIGBbPP0rR0GsvCRc7eT6dnA0lRb4yDlza6FqjqmUDEi6TrYHi/kGn0En4iDBQuainpMBxJ9WQMWW86ECTDx6ULFTJk8PnnsuvR2K3rwg3LJGHRFbXE3UlJY9+ri29XauZ0XZHlTi5IQJruoWeT6WQ6KIu6U3ZwsMQtau9dEAGfTWdQc6JdlcYe0olcoRHUsPVxBBMrMoUq3mxFO6PpdbYOkwrau8gV2lFBs/5Yjpp72XhzNOj/Ot2DVkw7Tn2Jxkpt3TCawWIrOFhM1DyaDBLITC73jhhJgE2zwUg/Qtm2sv1QU9hDtlon8IjB4EZkXTWQmyjfOWRbLCP9o8k334er4636W63DJtq96I5lLStI4Bft+2uqXbcJFIQ5hS57/+NCa/I8Cjk572L1w7Gbza/nyzm07R8HSeOt
+sidebar_class_name: "delete api-method"
+info_path: reference//Endpoints/Transactions/scalartax
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Transaction"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/scalartax/s_l_nexuses/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint is used to delete a specific transaction for a tenant.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK. Transaction deleted successfully"},"404":{"description":"Not Found. Transaction with the Specific ID not Found.","content":{"application/json":{"schema":{"type":"object","example":{"error":"Transaction Not Found."}}}}},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

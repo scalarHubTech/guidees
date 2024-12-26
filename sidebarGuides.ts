@@ -8,6 +8,8 @@ const sidebarsGuides = {
       items: [
         'Quickstart guide/introduction',
         'Quickstart guide/ingest-an-event',
+        'Quickstart guide/configure-your-price',
+        'Quickstart guide/subscribe-a-customer',
       ],
     },
       'login-and-authentication',

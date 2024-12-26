@@ -1,0 +1,71 @@
+---
+id: update-custom-tax-code
+title: "Update Custom Tax Code"
+description: "This API endpoint is used to update the details of a specific Custom Tax Code for a tenant."
+sidebar_label: "Update Custom Tax Code"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V99v2zYQ/lcIvqwBVNvpuhc/LU1aINuwFrGzPQSGcabOFluJVMljYsPw/z4cKduy7Czpms4vlqjj/eL33R3XkmDh5fBOXgZPthJjWIpLm6OcZDJHr5yuSVsjh3JcaC8uPl0LNHlttSGhvQgec0FWhDoHQkEFihwJdOmFnQsQvkal51qJjnoxt06AIDRgqCcz6fBrQE/vbL6Sw7VU1hAa4keo61IrYC/6nz27spZeFVgBP+ESqrpEfiRYTpXNcUqrGuVQenLaLGQm0ZCm1VTn7UWWbL8fBtssbzLZKLOzz6hIZrJ2tkZHGv0Jm2vZtd3J4apGTgzniWApeKt4hb1FLxO1s3lQlAmP7l4rPGPrLdef0n1r9NeAQue8Z67RxRyzpaREgPdWaSDMxYOm4sAJtpUy8kwz7Y0HAk/tv9q/dTMhN5sEBO0wZ0weZredjcbbQ+WTTJImBkOD5jEsL5PerpdbuNMWj7vz3dsnF3CTyRocVEjomCZraaBiA9EHzZpqoEJmLUgexr85UjnhFV9b4xOG3gwG/Hfo38ffe13K3EaO5WIUlELv56EsV72YiW/nyiEXThLkUTo9izlZ96DVPuFJgQllmUnlkIOazrrmU0U58WG7A2i3Kl6x7GvSFZ61tj4m8SSrv49u3UhfisYt/iZ9MZD/WICeU3yeVxDGBYqQnFbbyr5lddz5ohXiAFdTO5+mbE+3eTilnpEGMwY+869r7mN8gFK0lpv2dOIkO3h9Kpbr/TE2oQSPTjwUVjSaHoNMB//fYagET02DftRam1THpubWVZFMOxIdHxq3fzC54K/ioUBzypR4AL8NvB3k/2G2nYajThPLebu9dFvPiXbTBUP3zA6yehDrY43qnDvVJpNvT3WEd5CLmzQlySjz9ljmT0vigw0mP2oeTccHEqPtSHZ9JcxO/lv6SLd4tvoKOmfdvr3uzO8diyGy/2/eHPt/a2pnubkxXcX7eB498ReUOo/OiKjfC6tUcA5zkYdY3SPeY35fNJA4GH9KpTEBSYH5icQMxawE80Vm8hIIF9ateBjW5p49lZMmxF9OHeO1IXRcbkbo7tGJ9zFjLF4hFZZbXR1iS+K5Yij7XkEJjmDZ75Q631/rfMOjR9SUxpPgSjmUBVE97PdLq6AsrKfhz4PBeaOpCDNtj4j0B4uKpEnyiOJRBadpNeJspbb4DsGhuwjs1y55bGo7/vD7LArJrHn4sOXwb3+PY5R8Cjf7Yf/9j57ftZnbqL0h3CgmYQzLoz0dzHpxE0pMV54rq0KFhqAhPqc7bTrvDXqDBnOgIuaaCZH3jUJdWxfZ3z6XBmc9Zau+TyIRfhVolmqWfm2JxVaPrvIf56PUoU9rizJ9lq6tpwpMy6E0P3ZvYt00tO5eP/jK1xwz4ZL6dQnaxI7AeVo34L+TO/Bzijvwl5kcMtsyyRBn6fV6Bh5vXbnZ8PLXgG4lh3eTTN6D02kEuFvLXMf6ksvhHErfHQjaCXh10/SIM/GYw80imBXjAsrAbzKTX3CVrgmbySaTBUKOLlpPHy6Tjdfj1F62G4/q1Sbb7rhQCmv6V9lJq4h8uh0zCZv7dJXY4uCBrzjwkHy0MeTI7bi2liWYRYAFyyaV/PsHLVKfCQ==
+sidebar_class_name: "put api-method"
+info_path: reference//Endpoints/Custom Tax Codes/scalartax
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Custom Tax Code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/scalartax/custom_tax_codes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API endpoint is used to update the details of a specific Custom Tax Code for a tenant.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"example":{"tax_code_type":"string","entity_id":"string","code":"string","description":"string"},"type":"object","properties":{"tax_code_type":{"type":"string","description":"Type of the tax code (e.g., product, service)"},"entity_id":{"type":"string","description":"Unique identifier for the entity associated with the tax code"},"code":{"type":"string","description":"Unique tax code"},"description":{"type":"string","description":"Description of the tax code"}},"required":["tax_code_type","entity_id","code","description"],"title":"CustomTaxCode"}}},"description":"Custom tax Code object","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK.Custom Tax Code Updated Successfully.","content":{"application/json":{"schema":{"example":{"id":"string","entity_id":"string","tax_code_type":"string","code":"string","description":"string","Description of custom tax code":null,"created_by_id":"string","updated_by_id":"string","created_at":"string (date-time)","updated_at":"string (date-time)"},"type":"object","properties":{"id":{"type":"string","description":"Unique identifier for the custom tax code"},"entity_id":{"type":"string","description":"Unique identifier for the associated entity"},"tax_code_type":{"type":"string","description":"Type of tax code (e.g., product, service)"},"code":{"type":"string","description":"The unique code for the tax type"},"description":{"type":"string","description":"Description of the tax code"},"Description_of_custom_tax_code":{"type":"string","nullable":true,"description":"Optional description for a custom tax code"},"created_by_id":{"type":"string","description":"Identifier of the user who created the custom tax code"},"updated_by_id":{"type":"string","description":"Identifier of the user who last updated the custom tax code"},"created_at":{"type":"string","format":"date-time","description":"Date and time when the custom tax code was created"},"updated_at":{"type":"string","format":"date-time","description":"Date and time when the custom tax code was last updated"}},"required":["id","entity_id","tax_code_type","code","description","created_by_id","updated_by_id","created_at","updated_at"],"title":"CustomTaxCode1"}}}},"400":{"description":"Bad Request"},"404":{"description":"Not Found.Custom Tax Code with that Specific ID not Found.","content":{"application/json":{"schema":{"type":"object","example":{"error":"Custom Tax Code Not Found."}}}}},"422":{"description":"Unprocessable Entity. Validation errors occurred during the update.","content":{"application/json":{"schema":{"type":"object","example":{"errors":["Product code can't be blank","Category is invalid"]}}}}},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

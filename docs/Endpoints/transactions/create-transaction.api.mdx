@@ -1,0 +1,71 @@
+---
+id: create-transaction
+title: "Create Transaction"
+description: "This endpoint allows the user to create a transaction."
+sidebar_label: "Create Transaction"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWBZy9Ju+3i09qtAzpsa9Gk26EIAkZma22y5FJSm8Dwvw+UvdZrh2FoLrGER/Lx8YkdRLwJUF7BitEF1NF4B+sCKgqaTZuPJaxqExS5qvXGRYXW+vugYk0qBWIVvdJMGEmhio9pZlAA022iEI99tYeyA+1dJBflE9vWGo0CnP8IUqWDoGtqUL5oh01rCUqXrO37/imh5cZuvtIuBeW3P0jHsZRhqqCMnKiXi9B6FyhIwsPFgfz9meV9Zl1B8QJiHTQUAt4QlHBB2nMVRhUqFZLWFMJ1snYPfZ/5v1ksnhM4xkpdDBLNvqC99txQpUbRlGdl3B1aU6kKI85A0hwePk9z6Vr2UhG3ltSJiybuZ+qbROY+FDF7DsprnZipUlVi427yBDPncVr/rULct9L3g/YTVYZS4qhcX53IWX0ZtVqParz9mxqnLhI7tGpJfEc8hILAG4q1r6CE1gep12KsoYR50GiRI+7mYWM3TgxBAQoIOYGw6CCxhRLqGNtyPrdeo619iOXrxeJgjK/T1nh4arHPAlVDJujXklQnNnG/FBkGVx0TMvFREjYPqkgp4ZBhUMI2g6AYPz56bjBCCZ++r3JzIu/F4zs5mVq/AOOufU5uolzCMlNe4e4Z4ckLDuro/FR98Do15GKeIhQgkgzQg9lithgHjjoP3GEmK3HL1LaeRec/tBuHPNO+mYcBkmffoBHUePVuAhPDRuImnF3LSI2mv2fLmLmgZb4Nugmh4Y2q6Xp60vhkrbx8UY2zi7SL89aiccImt9+NbruCB7fJdCd+WxcglhJI120x0CXbvpfr20S8h/JqXcAdspHnKae+gJqwIs4G/Ul76XPo4dVKiAjcJiH07B32xe+II62pjf/EridP5/xsuRITjqu48ZXEMN7L7sR7KAEK8FnT7O1814FFd5OGNTfklN8vyBcsdA==
+sidebar_class_name: "post api-method"
+info_path: reference//Endpoints/Transactions/scalartax
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Transaction"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/scalartax/s_l_nexuses"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint allows the user to create a transaction.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"example":null}}},"description":"S_l_Nexus object","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Created","content":{"application/json":{"schema":{"example":{"message":"Records created successfully"}}}}},"400":{"description":"Bad Request.Malformed request or invalid data."},"422":{"description":"Unprocessable Entity. Validation errors occurred during the creation.","content":{"application/json":{"schema":{"type":"object","example":{"errors":["Valid Error Message"]}}}}},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

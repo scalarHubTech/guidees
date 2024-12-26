@@ -83,6 +83,22 @@ const config: Config = {
           location_attribute: {
             specPath: 'examples/location_attribute.yaml',
             outputDir: 'docs/Endpoints/Location Attributes'
+          },
+          transactions: {
+            specPath: 'examples/transaction.yaml',
+            outputDir: 'docs/Endpoints/Transactions'
+          },
+          tax_rules: {
+            specPath: 'examples/tax_rule.yaml',
+            outputDir: 'docs/Endpoints/Tax Rules'
+          },
+          transaction_rules: {
+            specPath: 'examples/transaction_rule.yaml',
+            outputDir: 'docs/Endpoints/Transaction Rules'
+          },
+          custom_tax_codes: {
+            specPath: 'examples/custom_tax_code.yaml',
+            outputDir: 'docs/Endpoints/Custom Tax Codes'
           }
         },
       },

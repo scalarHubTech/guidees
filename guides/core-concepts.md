@@ -39,7 +39,7 @@ The S_l_Nexus Controller assists businesses in mapping their operations to juris
 
 | **Resource** | **Description** |
 |--------------|---------------------------------------------------------------------------------------------------|
-| [S_l_Nexus API Reference](https://docs.scalarhub.ai/reference/Endpoints/s_l_nexus/) | Links business operations to tax jurisdictions, automating compliance and ensuring accurate tax obligations met. |
+| [S_l_Nexus API Reference](https://docs.scalarhub.ai/reference/Endpoints/s_l_nexuses/) | Links business operations to tax jurisdictions, automating compliance and ensuring accurate tax obligations met. |
 
 
 ### Locations
@@ -59,8 +59,14 @@ Subscriptions are crucial in managing service plans and billing cycles for Scala
 
 This controller facilitates creating, updating, and monitoring active subscription statuses. Its importance lies in helping businesses manage costs while ensuring uninterrupted service availability, thereby maintaining continuous access to ScalarHub's tools and features.
 
+<!-- | **Resource** | **Description** |
+|--------------|---------------------------------------------------------------------------------------------------|
+| [Subscriptions API Reference](https://docs.scalarhub.ai/reference/Endpoints/subscriptions/) | Manages service plans, billing cycles, and subscription statuses, ensuring continuous access to ScalarHub's tools and features. | -->
+
 | **Resource** | **Description** |
 |--------------|---------------------------------------------------------------------------------------------------|
+| [Subscription Creation](https://docs.scalarhub.ai/guides/Plans%20and%20subscriptions/creating-subscriptions) | A detailed overview of the subscription lifecycle, and how core billing mechanics operate on Subscriptions. |
+| [Subscription Modifications](https://docs.scalarhub.ai/guides/Plans%20and%20subscriptions/modifying-subscriptions) | A walkthrough of the ways to modify an existing subscription, including creating add-ons, changing pricing, and changing plans. |
 | [Subscriptions API Reference](https://docs.scalarhub.ai/reference/Endpoints/subscriptions/) | Manages service plans, billing cycles, and subscription statuses, ensuring continuous access to ScalarHub's tools and features. |
 
 

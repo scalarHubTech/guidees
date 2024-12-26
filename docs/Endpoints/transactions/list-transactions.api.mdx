@@ -1,0 +1,63 @@
+---
+id: list-transactions
+title: "List Transactions"
+description: "This endpoint retrieves all the transactions for the specific tenants."
+sidebar_label: "List Transactions"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUuP20YM/isCTy0grJ0+Ljp1g6bFtgG2qLfIYWEI9Ii2ZjuaUUjK8MLQfy84VjbyI7eeLJMfOXx8880RFHcC1TM8MUZBpz5FgXUJDYlj39t/qOCp9VJQbPrkoxZMyp72JAWGUGhLhc6ii23ibJSenN96VyhFjCp3UAKT9CkKCVRH+GG5tJ/zox7/hBJcikpRzYt9H7xD8y5exCBHENdSh/alrz1BBWnzQk6hBDpg1weC6vkIvoEKRNnHnXmien2tz40uDVH5dW5i2p0KebO8DOyltpNO0T4q7Yi/eBqf+/42oHapoeuEEbszK2235NTvqW5Qv3qK7x5Wj4WZvs9dNJM7DiGUIG1ivUolfhdRB6aro0VRqUYxBDV1THNnpMNwu1FJAzsDzdAtSh2Sw1DnOKhgk1IgjFDCzH4zn8X2xB1GilqTKG6Cl7bLO5/lUTxcbEyUCbvgrXrBQFIrHs5ivNQiWmOe5ZnHMaFSU28uaTD0zW2HnZ/r33Ea+huz+qbfqqAQiGvf9YmVuE7bmsklbq5avNyf4gE3gW4M9ksLaHOyotV3NOvg3D6ux3EcS/jp1kV7j03xN30eSBTGEn6+hXmIShwxFCviPXHxgTkxWMqOtE3WyY7s3vWoLVSwEIcBWfGwkHoiAImtLcdLvpcDB6igVe2rxSIzpU2i1Y/L5bspvh02PsGlCH00aHHKBOPakrqBvb6uTA5OkvKekInvB6vmTR3sKKshw2ycGQTl9PFb4i7P7Y9PT7k3H7cph3s1KYFVLuoJD1clzVWzuP/rofg1ucFYnPUKSrCmT9B3d8u75SRt6LK0TWu3uNXQG0tsk/PpTHJ251K3kBMkq1yH3lCT6ZcZzFapxJ08bm1n3tHtbBmzMHSfRDuMs4I+etHi7EG46Pv4VaD/v6dhWpbSQRd9QB+tuDyN40SvZ3ijl61zRrB1CcYhgxyPGxT6h8M4mvnzQKbvz+sS9sjerpX9G0toCRvizMh/yZ6Ae+eot/HuMQxWytXTY6R7I/7vH4wt/wGW7owk
+sidebar_class_name: "get api-method"
+info_path: reference//Endpoints/Transactions/scalartax
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List Transactions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/scalartax/s_l_nexuses"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint retrieves all the transactions for the specific tenants.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","example":[{"id":"string","entity_id":"string","country":"string","region":"string","juris_type_id":"integer","jurisdiction_type_id":"integer","juris_code":"string","juris_name":"string","effective_date":"string (ISO date)","end_date":null,"short_name":"string","signature_code":"string","state_assigned_no":"string","nexus_type_id":"integer","sourcing":"string","has_local_nexus":"boolean","local_nexus_type_id":"integer","has_permanent_establishment":"boolean","tax_id":"string","streamlined_sales_tax":"boolean","is_sst_active":"boolean","created_by_id":"string","updated_by_id":"string","tax_type_group":"string","nexus_tax_type_group":"string","is_seller_importer_of_record":"boolean","tax_name":"string","taxable_nexus":"boolean","created_at":"datetime","updated_at":"datetime"}]}}}},"400":{"description":"Bad Request"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

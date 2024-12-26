@@ -1,0 +1,63 @@
+---
+id: list-transaction-rules
+title: "List Transaction Rules"
+description: "This endpoint retrieves the details of all Transaction Rules."
+sidebar_label: "List Transaction Rules"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWG1vIjcQ/iuWP91JKyBp+4VPzbVJde21OSU5VWoUIeMdYK5ee2PPRnBo/3s13hd2Fzga+qGtIgWwx8+8eh7bW0lqGeT0UT54ZYPShM6Ku8JAkE+JTCFojzkPyql8WGEQYNPcoSXhgTzCCwRBKxApkEIThFsIZYzYQxvJRHoIubMBgpxu5eVkwh99Dbe/yERqZwks8azKc4Na8ez4c2CRrQx6BZnib7BWWW5ATh+3MhRaQwhyKufOGVBWJpJ2Rsx8wYJbiamcykAe7VIm0qoMur9hsQBN+AKzVBHPxI9EwjpHH80YTDDsjDZ5DyV1usjAUpxgk5T3asOhqUSCTCQurfMQzZo5OwPvne8Zj1ZFS3qD2oMiSGfzzazvSJGnhyeaFYpqowkz6CwYjoMlpCGIMsZpRTAjtWZrA9qlgZlB2zWvTKTLoQpTiEnRzqa4+9kHHWZnoHOBYHoDFXaMUjv2okwRI2wLY4TzIkb6DLdVmnoIoc1YH69M/s/GP7UJPC8TnHTt0l6J5+A1WFJLiPqyOfgzDG+MqhQ2Zu/KrvarYw7Ps9zrU/Lf8GIwWz7xXyLrDuLmn0ETG+a5YAirVnmoj319RdXXWqldZ+p1299UBtyVuH93dIioo+z1glNQnyw+FyAw5TULBC8WzkfgCiTCDZrrPubC+ayN7p6O62a94OnG8NbYYYt+NXwLcBC/0+lPBeNhk/eWizcwWo4ScdXuwsiJbxn2q621VbRjgL6mG6OWgpxAmzJNgsCFILUWGEQDnApnhRIVroi45TH6OUtf9DCsXGFSMQdRIUetFWrZ5bLzPGriiEG0UOU+z7bgTSNFgizs56scKv2AgThhDaCIgE3a0L441JAI7SFFEhlk7q0sywHfndR+ZK92SfJcjJpvThXmDYtxdPlctYlxbbXv6LtXCUeQbmvJdpu3OE3U4LlQJiRiGbupn9FK2VjxDe2d8ilD2xFqu3Pfjl/RYlZkIoLuG1NlacCP5wZ5xyAnG4BaC5ZsDaotYPdrzpm1+/O0kx+rJZ0t3eBSrYj9LCtfu0z/b3ja6mdne9R4CutD0xw7LPKGCVPNm2bZodIWDS3B8kDUrirh42hd9j+Vgk7r7iwr+bJSWPKb0979UAkeCVTjGffni9NgjW8sLi6GAJevBLiMjjBLn/YC6ZgLgY7Qbh/hnsWOQHzB/G/W3R+YH6+7djMQEp+Wunfbu0jncfbbQzfQdyoVd/BcQCC26LtDMu8tgbfKiHvwL+DFdcVzZSIzoJXjc94S4q5StJJTOQ5aGeVJrcfDo1wYy0SGCFOdzAtv5FSuiPLpeMwumZULNP1mMrmoYVbFHN3BzWNEhRSP/AF04ZE293xdrrb1O1Ae/FXBRrUBZlVsQxRjYo5CMqm/3DRnpp9/f4guol24uLyO7X006kGt93vD8A2g/n/18b34sWbaKmOJZP+rVRejyWhSvwIoTbvTrOR190WeO8+x7QWqfgkYaZeNQyXCMpApZKl66PuOGCeXwGfhdsFZRA2H0aLMOLYLFyhTtmNQPDbsv5sM4rDdPWj84xeUOmcEaxrnRmHcNTES27rYHmVbbAfuRGwcv+twTbHsdjtXAT55U5Y8/FwAt7LHJ2Zpj9wp+VeZyBWoFHys0D9hw8nQGnJqbrFMMcOnGi7Cdj/8dM3V8xd6X3Uj
+sidebar_class_name: "get api-method"
+info_path: reference//Endpoints/Transaction Rules/scalartax
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List Transaction Rules"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/scalartax/transaction_rules/"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This endpoint retrieves the details of all Transaction Rules.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"example":[{"success":"boolean","transaction_rule":{"id":"string","name":"string","effective_date":"date","expiration_date":"date","rule_type":"string","document_types":"array of strings","ignore_rule_on_error":"boolean","inactive":"boolean","created_by_id":"string","updated_by_id":"string","created_at":"datetime","updated_at":"datetime","entity_id":"string","allocate_tax_on_single_line":"boolean"},"operations":[{"conditions":[{"id":"string","transaction_rule_id":"string","field":"string","operator":"string","values":"null or array","created_at":"datetime","updated_at":"datetime","address_types":"null or array"},{"id":"string","transaction_rule_id":"string","field":"string","operator":"string","values":"null or array","created_at":"datetime","updated_at":"datetime","address_types":"null or array"}],"allocations":[{"id":"string","transaction_rule_id":"string","tax_code":"string","percentage":"number","created_at":"datetime","updated_at":"datetime","location_id":"null or string","address_id":"string or null"},{"id":"string","transaction_rule_id":"string","tax_code":"string","percentage":"number","created_at":"datetime","updated_at":"datetime","location_id":"null or string","address_id":"null or string"}]}]}],"type":"object","properties":{"transaction_rule":{"type":"object","properties":{"name":{"type":"string","description":"Name of the transaction rule"},"entity_id":{"type":"string","description":"Unique identifier for the entity"},"effective_date":{"type":"string","format":"date","description":"Effective date of the rule"},"expiration_date":{"type":"string","format":"date","description":"Expiration date of the rule"},"rule_type":{"type":"string","description":"Type of the rule (e.g., Allocation Rule)"},"allocate_tax_on_single_line":{"type":"boolean","description":"Flag to indicate if tax is allocated on a single line"},"ignore_rule_on_error":{"type":"boolean","description":"Flag to indicate if rule should be ignored on error"},"inactive":{"type":"boolean","description":"Flag to indicate if the rule is inactive"},"document_types":{"type":"array","items":{"type":"string"},"description":"List of document types (e.g., invoice, credit memo)"}}},"operations":{"type":"array","items":{"type":"object","properties":{"conditions":{"type":"array","items":{"type":"object","properties":{"field":{"type":"string","description":"Field to apply the condition"},"operator":{"type":"string","description":"Operator for the condition (e.g., equals, greater_than)"},"values":{"type":"object","properties":{"min":{"type":"number","description":"Minimum value for the condition"}}},"address_types":{"type":"array","items":{"type":"object","properties":{"tax_code":{"type":"string","description":"Tax code for the address"},"percent_allocated":{"type":"number","description":"Percent allocated for the tax code"}}}}}}},"allocations":{"type":"array","items":{"type":"object","properties":{"tax_code":{"type":"string","description":"Tax code for the allocation"},"location_id":{"type":"string","description":"Location identifier (nullable)"},"address_id":{"type":"integer","description":"Address identifier (nullable)"},"percentage":{"type":"number","description":"Allocation percentage"},"country":{"type":"string","description":"Country for the allocation"},"address_line1":{"type":"string","description":"Address line 1"},"address_line2":{"type":"string","description":"Address line 2"},"city":{"type":"string","description":"City for the allocation"},"state":{"type":"string","description":"State for the allocation"},"zip_code":{"type":"string","description":"Zip code for the allocation"}}}}}}}},"title":"TransactionRule"}}}},"400":{"description":"Bad Request"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      
