@@ -5,7 +5,7 @@ description: "This endpoint is used to create a new user within the scalartax."
 sidebar_label: "Create User"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVk2P2zYQ/SvEXHpRbWebXnTqbrsBtiiaRextD4axoMWxxUQiuUMqXsPQfw+GlCXZ3gTZIL5YoN48zsfjow4Q5NZDvoQHj+RhlYFCX5B2QVsDOSxK7QUa5aw2QWgvGo9KBCsKQhlQSGFwx4skdjqU2ohQovCFrCQF+TyBDAifGvThxqo95AcorAloAj9K5ypdSN5q+tHzfgfwRYm15Kewdwg52PVHLAJk4Mg6pKDR81ve8vtQRtY4QvpA2mzhvFCu/5dYXgpoM9ho8uHxVeExRBwJKvnaeI7ow7GWunopdGOplgHyDvEVrvhSSKUIvWc+shW+Lh2O6NOJ4Q6p1t7rNKxvk9z3WC+k97bQMqCKOokqaYZNmD8pSj2u949ajdi1CbhFuqC/U2iC3mgkYTc9odiVR3EqEcqkWGL+xqmfxR/H1PGNN2m5DFs7afbf2eh/ZY1H+i4yjt4EHc7y/NqojH5qUOgh242lyJdIgJPiM6gJFZ/0XuInCh+rNeuFNUjmcv7nEzvv8LiKs7asMgg6VNgpLTXutKw/uxHGnvene6gjUINtBh6LhrjKfHmANUpCum5CCfly1a4Y7501PpnB1ewt/53uM2+KAr3fNJU4gnkAb2ezS+yNVOJDcrOIubq6xDwYR5YZ5bpCcRs7MBH/yUqraHQCiSx5YYuiIUIlVMNjTQLgmrU1k9ivH7RJfJa1q6L04laQwzupqxPXrmyi89x57v3vL5V7ZwIrpRJzpM9I4jbSMbzGUFoFOTjro+lKbjlMe9+f8tj8FHhAHOvjfBqqIIcyBJdPp5xDVVof8t9mszddaNmstb2Q+D8MFYkJeKzHqc+5C2m4N6PZ903hrTiHCIO8Ewhk3cO7o4/+/f8i1sXd/TBcV7dDK4/XzXChjOx4dE8MqyPzHxY7S480f3STmhS2PjlqI/yF5w6vzuxydmFwswszGuUx+Mtxsc1Am42N3evO5jzOZCGfX7wfvLi+vxN/2aKp0YSoJ8iAh50wbyazyaxTsiyikrs0OG7eOGeJxXOiilFPpj5Bwqhv3dJJ69oMAlLt329Yp7rAl9kiZspoFm0tzSihZDYietFZqaMPlp/xMdQJM+BzmLpKahNvJorXfDpFS+gDuDnxsywDtkw+LPz+cFhLjw9UtS0vPzVI7H+rDD5L0uw70f4yKFEqlu3yAJ9wz3WmUn5dcBYMrxrO5sJg2uwYcV0U6MI3sauRH9y/ny/4eHXferVVHENyx1qWO8gBMrAueU9+SGsHqKTZNnLL2MTJvy+3OrRK
+api: eJytU01v2zAM/SsCz17sbjeflm2XAQNaIOkp8IGRmVidLKkSlQ8Y/u8D7bRI06G7zBcb9CPfe/wYgHGfoN7AY6KYoCmgpaSjCWy8gxrWnUmKXBu8caxMUjlRq9grHQmZFCpHRwlGdTTcGae4I5U0WoyMpwUUEOk5U+Jvvj1DPYD2jsmxfGII1mgUqvIpCd8ASXfUI9QuWzuOt3K+T6ztTOi3T6T5wmAitVBzzDQWkEjnaPgM9WaALWGkuMzcQb1pxkbwKXiXKAnh56qS11ueVdaaUtplq17AUPxD+jiK3p648y3UEHwSbQGFF8rXlpSiPZUgKuNBmi4ic7RQQ8cc6rK0XqPtfOL6S1XdXVK7vDUebhvyS6BqrgTizbidF4Fs2JI4mZLXeHqXOk1cLR9+qh9e554cT3agAFE1Y+4W1aK6OEc9OXfYS13JW+UQfBSXb+TTCftgaaF9X6YZIhjq0QjqEvp6BYOxAKbYp/vdiuLBaPp7tQlTClq626O7EjSvhhJXt1avlu5/LDSfgxAynbgMFo0TQVMHhsu4N/CaIM2ZTqsAuS6Zqvwfhi0meox2HCX8nCnKtjYFHDAa3MrsNs1YQEfYUpx25Dedxeds5dNaVAjcZlHzbiHH4iVjqTUF/hDbXC3uw/1qDQVsL/fa+1ZyIh7l0vAINUABfmrtdEBTbACLbp9xL9i5pjx/AOJxg60=
 sidebar_class_name: "post api-method"
 info_path: reference//Endpoints/Users/scalartax
 custom_edit_url: null
@@ -54,7 +54,7 @@ This endpoint is used to create a new user within the scalartax.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"user":{"type":"object","properties":{"username":{"type":"string","description":"User's username"},"first_name":{"type":"string","description":"User's first name"},"last_name":{"type":"string","description":"User's last name"},"email":{"type":"string","format":"email","description":"User's email address"},"role_name":{"type":"string","description":"User's role name"},"role_permission":{"type":"string","description":"Permissions associated with the user's role"},"created_by_id":{"type":"integer","description":"Identifier of the user who created this user"},"updated_by_id":{"type":"integer","description":"Identifier of the user who last updated this user"}}},"company_name":{"type":"string","description":"Name of the company"},"entity_id":{"type":"string","description":"Unique identifier for the entity"}},"required":["username","first_name","last_name","email","role_name","role_permission","created_by_id","updated_by_id","entity_id","company_name"],"title":"User"}}},"description":"Created user object","required":true}}
+  body={{"content":{"application/json":{"schema":null}},"description":"Created user object","required":true}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ This endpoint is used to create a new user within the scalartax.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"204":{"description":"Successful response"},"400":{"description":"Bad Request"},"422":{"description":"Unprocessable Entity. Validation errors occurred during the creation.","content":{"application/json":{"schema":{"type":"object","example":{"error":"Failed to create locations"}}}}},"500":{"description":"Internal Server Error"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{}}}}}
 >
   
 </StatusCodes>

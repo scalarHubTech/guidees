@@ -225,11 +225,11 @@ const sidebars : SidebarsConfig = {
             id: 'Endpoints/subscriptions/Subscriptions'
           },
           items: [
-            // {
-            //   type: 'doc',
-            //   id: 'Endpoints/subscriptions/create-subscription',  
-            //   className: 'sidebar-item-post'
-            // },
+            {
+              type: 'doc',
+              id: 'Endpoints/subscriptions/create-subscription',  
+              className: 'sidebar-item-post'
+            },
             {
               type: 'doc',
               id: 'Endpoints/subscriptions/list-subscriptions', 
@@ -240,16 +240,16 @@ const sidebars : SidebarsConfig = {
               id: 'Endpoints/subscriptions/fetch-subscription',   
               className: 'sidebar-item-get'
             },
-            // {
-            //   type: 'doc',
-            //   id: 'Endpoints/subscriptions/update-subscription', 
-            //   className: 'sidebar-item-put'
-            // },
-            // {
-            //   type: 'doc',
-            //   id:'Endpoints/subscriptions/delete-subscription',
-            //   className: 'sidebar-item-delete'
-            // },          
+            {
+              type: 'doc',
+              id: 'Endpoints/subscriptions/update-subscription', 
+              className: 'sidebar-item-put'
+            },
+            {
+              type: 'doc',
+              id:'Endpoints/subscriptions/delete-subscription',
+              className: 'sidebar-item-delete'
+            },          
           ],
         },
         {
@@ -285,41 +285,6 @@ const sidebars : SidebarsConfig = {
               id:  'Endpoints/locations/delete-location',
               className: 'sidebar-item-delete'
             },      
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Transactions',
-          link: {
-            type: 'doc',
-            id: 'Endpoints/transactions/Transactions'
-          },
-          items: [
-            {
-              type: 'doc',
-              id: 'Endpoints/transactions/create-transaction', 
-              className: 'sidebar-item-post'
-            },
-            {
-              type: 'doc',
-              id: 'Endpoints/transactions/list-transactions',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id: 'Endpoints/transactions/fetch-transaction',   
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id: 'Endpoints/transactions/update-transaction', 
-              className: 'sidebar-item-put'
-            },
-            {
-              type: 'doc',
-              id: 'Endpoints/transactions/delete-transaction',
-              className: 'sidebar-item-delete'
-            },              
           ],
         },
         {
@@ -393,111 +358,6 @@ const sidebars : SidebarsConfig = {
               id: 'Endpoints/location attributes/delete-location-attribute',
               className: 'sidebar-item-delete'
             },      
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Tax Rules',
-          link: {
-            type: 'doc',
-            id: 'Endpoints/tax rules/Tax-Rules'
-          },
-          items: [
-            {
-              type: 'doc',
-              id:  'Endpoints/tax rules/create-tax-rule',
-              className: 'sidebar-item-post'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/tax rules/list-tax-rules',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/tax rules/fetch-tax-rule',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/tax rules/update-tax-rule',
-              className: 'sidebar-item-put'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/tax rules/delete-tax-rule',
-              className: 'sidebar-item-delete'
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Transaction Rules',
-          link: {
-            type: 'doc',
-            id: 'Endpoints/transaction rules/Transaction-Rules'
-          },
-          items: [
-            {
-              type: 'doc',
-              id:  'Endpoints/transaction rules/create-transaction-rule',
-              className: 'sidebar-item-post'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/transaction rules/list-transaction-rules',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/transaction rules/fetch-transaction-rule',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/transaction rules/update-transaction-rule',
-              className: 'sidebar-item-put'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/transaction rules/delete-transaction-rule',
-              className: 'sidebar-item-delete'
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Custom Tax Codes',
-          link: {
-            type: 'doc',
-            id: 'Endpoints/custom tax codes/Custom-Tax-Codes'
-          },
-          items: [
-            {
-              type: 'doc',
-              id:  'Endpoints/custom tax codes/create-custom-tax-code',
-              className: 'sidebar-item-post'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/custom tax codes/list-custom-tax-codes',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/custom tax codes/fetch-custom-tax-code',
-              className: 'sidebar-item-get'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/custom tax codes/update-custom-tax-code',
-              className: 'sidebar-item-put'
-            },
-            {
-              type: 'doc',
-              id:  'Endpoints/custom tax codes/delete-custom-tax-code',
-              className: 'sidebar-item-delete'
-            },
           ],
         },
       ],

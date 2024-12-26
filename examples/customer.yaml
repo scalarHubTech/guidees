@@ -33,7 +33,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schema/Customer1"
+                $ref: "#/components/schema/Customer"
                 example: 
                   id: string
                   customer_name: string
@@ -102,7 +102,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schema/Customer1"
+                $ref: "#/components/schema/Customer"
                 example:
                 - id: string
                   customer_name: string
@@ -170,7 +170,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schema/Customer1"
+                $ref: "#/components/schema/Customer"
                 example:
                   id: string
                   customer_name: string
@@ -475,121 +475,4 @@ components:
             - tax_exemption
             - contact
             - external_address
-    Customer1:
-      type: object
-      properties:
-        id:
-          type: string
-        customer_name:
-          type: string
-        external_customer_id:
-          type: string
-          nullable: true
-        contact_id:
-          type: string
-        address_id:
-          type: string
-        tax_exemption_status:
-          type: boolean
-          nullable: true
-        customer_code:
-          type: string
-        alternate_id:
-          type: string
-        taxpayer_id:
-          type: string
-        last_transaction:
-          type: string
-          format: date-time
-          nullable: true
-        customer_labels:
-          type: string
-        exposure_zones:
-          type: string
-          nullable: true
-        created_by_id:
-          type: string
-        updated_by_id:
-          type: string
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-        external_address:
-          type: object
-          properties:
-            id:
-              type: string
-            address_line1:
-              type: string
-              description: First line of the address
-            address_line2:
-              type: string
-              description: Second line of the address (optional)
-            city:
-              type: string
-            address_string:
-              type: string
-              nullable: true
-            state:
-              type: string
-            zip_code:
-              type: string
-            country:
-              type: string
-            created_at:
-              type: string
-              format: date-time
-            updated_at:
-              type: string
-              format: date-time
-        contact:
-          type: object
-          properties:
-            id:
-              type: string
-            name:
-              type: string
-            address_id:
-              type: string
-              nullable: true
-            email:
-              type: string
-            phone:
-              type: string
-            fax_number:
-              type: string
-            contact_type:
-              type: string
-              nullable: true
-            created_at:
-              type: string
-              format: date-time
-            updated_at:
-              type: string
-              format: date-time
-        tax_exemption:
-          type: object
-          properties:
-            id:
-              type: string
-            customer_id:
-              type: string
-            effective_date:
-              type: string
-              format: date-time
-              nullable: true
-            exemption_reason:
-              type: string
-            created_at:
-              type: string
-              format: date-time
-            updated_at:
-              type: string
-              format: date-time
-    required:
-      - external_address
-      - contact
-      - tax_exemption
+    

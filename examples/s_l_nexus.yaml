@@ -209,14 +209,6 @@ paths:
                   message : Records updated and created successfully
         '400':
           description: Bad Request. Malformed request or invalid data.
-        '404':
-          description: Not Found. S_l_Nexus with that Specific ID not Found.
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  error: S_l_Nexus Not Found.
         '422':
           description: Unprocessable Entity. Validation errors occurred during the update.
           content:
@@ -225,6 +217,14 @@ paths:
                 type: object
                 example:
                   errors: [Validation error message]
+        '404':
+          description: Not Found. S_l_Nexus with that Specific ID not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error: S_l_Nexus Not Found.
         '500':
           description: Internal Serval Error
     delete:
@@ -240,7 +240,7 @@ paths:
           required: true
       responses:
         '200':
-          description: OK. S_l_Nexus deleted successfully
+          description:OK. Customer deleted successfully
         '404':
           description: Not Found. S_l_Nexus with the Specific ID not Found.
           content:

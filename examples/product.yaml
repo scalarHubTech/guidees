@@ -206,13 +206,13 @@ paths:
         '400':
           description: Bad Request
         '404':
-          description: Not Found.Product with that Specific ID not Found.
+          description: Not Found.Customer with that Specific ID not Found.
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  error: Product Not Found.
+                  error: Customer Not Found.
         '422':
           description: Unprocessable Entity. Validation errors occurred during the update.
           content:
